@@ -22,6 +22,79 @@ padding: 0px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }	
 
+/* Estilo del cuadro emergente */
+.tooltip {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: 200px;
+}
+
+.tooltip .group.first{
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip .group.first .group-children{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.tooltip .group.first span{
+  margin: 0;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.tooltip .group.first i{
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.tooltip .group.second{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.tooltip .group.second span{
+  color: #555;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.tooltip h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.tooltip p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+.word {
+  cursor: pointer;
+}
+
+.word:hover {
+  background-color: #f0f0f0;
+}
+
 @media only screen and (min-width: 1200px) {
   .container{
     width: 1000px;
@@ -37,11 +110,6 @@ padding: 0px 20px;
   .container .content .group{
     width: 50%;
   }
-  /* .container .content .group .img-book{
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }	 */
     
 }
 
