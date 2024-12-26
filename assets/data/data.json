@@ -1,1268 +1,2018 @@
 {
     "words": [
         {
-            "word":"the",
-            "word_translation":"el, la, los, las"
+            "word": "the",
+            "word_translation": "el, la, los, las"
         },
         {
-            "word":"bat",
-            "word_translation":"bate"
+            "word": "bat",
+            "word_translation": "bate, palo de béisbol"
         },
         {
-            "word":"smashed",
-            "word_translation":"golpeó"
+            "word": "smashed",
+            "word_translation": "golpeó, estrelló, aplastó"
         },
         {
-            "word":"into",
-            "word_translation":"contra"
+            "word": "into",
+            "word_translation": "contra, hacia, en dirección a"
         },
         {
-            "word":"my",
-            "word_translation":"mi"
+            "word": "my",
+            "word_translation": "mi"
         },
         {
-            "word":"face",
-            "word_translation":"cara"
+            "word": "face",
+            "word_translation": "cara, rostro"
         },
         {
-            "word":"with",
-            "word_translation":"con"
+            "word": "with",
+            "word_translation": "con"
         },
         {
-            "word":"such",
-            "word_translation":"tal"
+            "word": "such",
+            "word_translation": "tal, semejante"
         },
         {
-            "word":"force",
-            "word_translation":"fuerza"
+            "word": "force",
+            "word_translation": "fuerza, ímpetu, potencia"
         },
         {
-            "word":"that",
-            "word_translation":"que"
+            "word": "that",
+            "word_translation": "que"
         },
         {
-            "word":"it",
-            "word_translation":"eso"
+            "word": "it",
+            "word_translation": "eso"
         },
         {
-            "word":"crushed",
-            "word_translation":"aplastó"
+            "word": "crushed",
+            "word_translation": "aplastó, trituró, destrozó"
         },
         {
-            "word":"nose",
-            "word_translation":"nariz"
+            "word": "nose",
+            "word_translation": "nariz"
         },
         {
-            "word":"a",
-            "word_translation":"un/una"
+            "word": "a",
+            "word_translation": "un/una"
         },
         {
-            "word":"distorted",
-            "word_translation":"deformada"
+            "word": "distorted",
+            "word_translation": "deformada, alterada, torcida"
+        },        
+        {
+            "word": "u-shape",
+            "word_translation": "forma de U, en forma de U"
+        },
+        {
+            "word": "collision",
+            "word_translation": "colisión, choque, impacto"
+        },
+        {
+            "word": "sent",
+            "word_translation": "envió, mandó, remitió"
+        },
+        {
+            "word": "soft",
+            "word_translation": "suave, blando, delicado"
+        },
+        {
+            "word": "tissue",
+            "word_translation": "tejido, tela, material biológico"
+        },
+        {
+            "word": "brain",
+            "word_translation": "cerebro, mente, órgano cerebral"
+        },
+        {
+            "word": "slamming",
+            "word_translation": "golpeando, estrellando, cerrando con fuerza"
+        },
+        {
+            "word": "inside",
+            "word_translation": "dentro, adentro, en el interior"
+        },
+        {
+            "word": "skull",
+            "word_translation": "cráneo, cabeza, caja craneal"
+        },
+        {
+            "word": "immediately",
+            "word_translation": "inmediatamente, al instante, sin demora"
+        },
+        {
+            "word": "wave",
+            "word_translation": "ola, onda, movimiento"
+        },
+        {
+            "word": "swelling",
+            "word_translation": "hinchazón, inflamación, tumefacción"
+        },
+        {
+            "word": "surged",
+            "word_translation": "aumentó, ascendió, subió rápidamente"
+        },
+        {
+            "word": "throughout",
+            "word_translation": "a través de, por todo, en todo"
+        },
+        {
+            "word": "head",
+            "word_translation": "cabeza, cráneo, parte superior del cuerpo"
+        },
+        {
+            "word": "fraction",
+            "word_translation": "fracción, parte, porción"
+        },
+        {
+            "word": "second",
+            "word_translation": "segundo, instante, momento"
+        },
+        {
+            "word": "i",
+            "word_translation": "yo"
+        },
+        {
+            "word": "had",
+            "word_translation": "tenía, había, poseía"
+        },
+        {
+            "word": "broken",
+            "word_translation": "rota, quebrada, fracturada"
+        },
+        {
+            "word": "multiple",
+            "word_translation": "múltiples, varios, diversos"
+        },
+        {
+            "word": "fractures",
+            "word_translation": "fracturas, roturas, quiebres"
+        },        
+        {
+            "word": "two",
+            "word_translation": "dos, un par, ambos"
+        },
+        {
+            "word": "shattered",
+            "word_translation": "destrozadas, rotas, quebradas"
+        },
+        {
+            "word": "eye",
+            "word_translation": "ojo, visión, mirada"
+        },
+        {
+            "word": "sockets",
+            "word_translation": "cuencas, cavidades, huecos"
+        },
+        {
+            "word": "on",
+            "word_translation": "en, sobre, encima de"
+        },
+        {
+            "word": "day",
+            "word_translation": "día, jornada, período"
+        },
+        {
+            "word": "of",
+            "word_translation": "de, sobre, acerca de"
+        },
+        {
+            "word": "sophomore",
+            "word_translation": "segundo, estudiante de segundo año"
+        },
+        {
+            "word": "year",
+            "word_translation": "año, ejercicio, temporada"
+        },
+        {
+            "word": "high",
+            "word_translation": "secundaria, alta, elevado"
+        },
+        {
+            "word": "school",
+            "word_translation": "escuela, instituto, centro educativo"
+        },
+        {
+            "word": "was",
+            "word_translation": "estaba, fue, se encontraba"
+        },
+        {
+            "word": "in",
+            "word_translation": "en, dentro de, a"
+        },
+        {
+            "word": "baseball",
+            "word_translation": "béisbol, pelota, deporte"
+        },
+        {
+            "word": "as",
+            "word_translation": "como, así como, en calidad de"
+        },
+        {
+            "word": "classmate",
+            "word_translation": "compañero, colega, compañero de clase"
+        },
+        {
+            "word": "took",
+            "word_translation": "tomó, cogió, realizó"
+        },
+        {
+            "word": "full",
+            "word_translation": "completo, lleno, total"
+        },
+        {
+            "word": "swing",
+            "word_translation": "golpe, movimiento, balanceo"
+        },
+        {
+            "word": "hit",
+            "word_translation": "golpe, impacto, golpeo"
+        },
+        {
+            "word": "slipped",
+            "word_translation": "resbaló, deslizó, patinó"
+        }
+        ,
+        {
+            "word": "out",
+            "word_translation": "fuera, afuera, en el exterior"
+        },
+        {
+            "word": "his",
+            "word_translation": "su, de él, perteneciente a él"
+        },
+        {
+            "word": "final",
+            "word_translation": "final, último, definitivo"
+        },
+        {
+            "word": "hands",
+            "word_translation": "manos, extremidades, dedos"
+        },
+        {
+            "word": "came",
+            "word_translation": "vino, llegó, acudió"
+        },
+        {
+            "word": "flying",
+            "word_translation": "volando, planeando, en el aire"
+        },
+        {
+            "word": "toward",
+            "word_translation": "hacia, en dirección a, rumbo a"
+        },
+        {
+            "word": "me",
+            "word_translation": "mí, a mí, conmigo"
+        },
+        {
+            "word": "before",
+            "word_translation": "antes, previo a, con antelación"
+        },
+        {
+            "word": "striking",
+            "word_translation": "golpeando, impactando, golpeando fuertemente"
+        },
+        {
+            "word": "directly",
+            "word_translation": "directamente, de forma directa, sin intermediarios"
+        },
+        {
+            "word": "between",
+            "word_translation": "entre, en medio de, dentro de"
+        },
+        {
+            "word": "eyes",
+            "word_translation": "ojos, vista, mirada"
+        },
+        {
+            "word": "have",
+            "word_translation": "tener, poseer, contar con"
+        },
+        {
+            "word": "no",
+            "word_translation": "no, ninguno, de ninguna manera"
+        },
+        {
+            "word": "memory",
+            "word_translation": "memoria, recuerdo, reminiscencia"
+        },
+        {
+            "word": "moment",
+            "word_translation": "momento, instante, periodo"
+        },        
+        {
+            "word": "impact",
+            "word_translation": "impacto, efecto, consecuencia"
+        },
+        {
+            "word": "and",
+            "word_translation": "y, además, junto con"
+        },
+        {
+            "word": "when",
+            "word_translation": "cuando, en el momento que, al"
+        },
+        {
+            "word": "opened",
+            "word_translation": "abrió, desveló, desbloqueó"
+        },
+        {
+            "word": "saw",
+            "word_translation": "vio, observó, percibió"
+        },
+        {
+            "word": "people",
+            "word_translation": "personas, gente, individuos"
+        },
+        {
+            "word": "staring",
+            "word_translation": "mirando fijamente, observando intensamente, mirando con atención"
+        },
+        {
+            "word": "at",
+            "word_translation": "a, en, hacia"
+        },
+        {
+            "word": "me",
+            "word_translation": "mí, a mí, conmigo"
+        },
+        {
+            "word": "running",
+            "word_translation": "corriendo, trotando, huyendo"
+        },
+        {
+            "word": "over",
+            "word_translation": "hacia, sobre, encima de"
+        },
+        {
+            "word": "to",
+            "word_translation": "a, hacia, para"
+        },
+        {
+            "word": "help",
+            "word_translation": "ayuda, asistir, socorro"
+        },
+        {
+            "word": "looked",
+            "word_translation": "miró, observó, examinó"
+        },
+        {
+            "word": "down",
+            "word_translation": "abajo, hacia abajo, descendente"
+        },
+        {
+            "word": "noticed",
+            "word_translation": "notó, se dio cuenta, observó"
+        },
+        {
+            "word": "spots",
+            "word_translation": "manchas, puntos, lugares"
+        },
+        {
+            "word": "red",
+            "word_translation": "rojas, escarlatas, color rojo"
+        },
+        {
+            "word": "clothes",
+            "word_translation": "ropa, vestimenta, prendas"
+        },        
+        {
+            "word": "one",
+            "word_translation": "Uno, una"
+        },
+        {
+            "word": "classmates",
+            "word_translation": "compañeros de clase, compañeros de escuela, compañeros de estudio"
+        },
+        {
+            "word": "shirt",
+            "word_translation": "camisa, camiseta, prenda"
+        },
+        {
+            "word": "off",
+            "word_translation": "fuera, apagado, de"
+        },
+        {
+            "word": "back",
+            "word_translation": "espalda, de vuelta, atrás"
+        },
+        {
+            "word": "handed",
+            "word_translation": "entregó, dio, pasó"
+        },
+        {
+            "word": "used",
+            "word_translation": "usó, utilizó, aprovechó"
+        },
+        {
+            "word": "plug",
+            "word_translation": "tapón, enchufe, conector"
+        },
+        {
+            "word": "stream",
+            "word_translation": "corriente, arroyo, flujo"
+        },
+        {
+            "word": "blood",
+            "word_translation": "sangre, líquido vital"
+        },
+        {
+            "word": "rushing",
+            "word_translation": "corriendo, apresurando, fluyendo"
+        },
+        {
+            "word": "from",
+            "word_translation": "de, desde, procedente de"
+        },
+        {
+            "word": "shocked",
+            "word_translation": "conmocionado, sorprendido, asombrado"
+        },
+        {
+            "word": "confused",
+            "word_translation": "confundido, desorientado, perdido"
+        },
+        {
+            "word": "unaware",
+            "word_translation": "desconocido, sin saber, ignorante"
+        },
+        {
+            "word": "how",
+            "word_translation": "cómo, de qué manera"
+        },
+        {
+            "word": "seriously",
+            "word_translation": "seriamente, gravemente, con seriedad"
+        },
+        {
+            "word": "been",
+            "word_translation": "estado, sido, vivido"
+        },
+        {
+            "word": "injured",
+            "word_translation": "herido, lesionado, dañado"
+        },
+        {
+            "word": "teacher",
+            "word_translation": "maestro, profesor, educador"
+        },
+        {
+            "word": "looped",
+            "word_translation": "enlazó, rodeó, ató"
+        },
+        {
+            "word": "arm",
+            "word_translation": "brazo, extremidad superior"
+        },
+        {
+            "word": "around",
+            "word_translation": "alrededor, por, sobre"
+        },
+        {
+            "word": "shoulder",
+            "word_translation": "hombro, parte superior del cuerpo"
+        },
+        {
+            "word": "we",
+            "word_translation": "nosotros, nosotras"
+        },
+        {
+            "word": "began",
+            "word_translation": "comenzamos, empezamos, iniciamos"
+        },
+        {
+            "word": "long",
+            "word_translation": "largo, extenso, prolongado"
+        },
+        {
+            "word": "walk",
+            "word_translation": "caminar, andar, pasear"
+        },        
+        {
+            "word": "nurses",
+            "word_translation": "de la enfermera, enfermeras, personal de enfermería"
+        },
+        {
+            "word": "office",
+            "word_translation": "oficina, despacho, sede"
+        },
+        {
+            "word": "across",
+            "word_translation": "a través de, a lo largo de, cruzando"
+        },
+        {
+            "word": "field",
+            "word_translation": "campo, área, terreno"
+        },
+        {
+            "word": "hill",
+            "word_translation": "colina, cerro, loma"
+        },
+        {
+            "word": "random",
+            "word_translation": "aleatorio, fortuito, incidental"
+        },
+        {
+            "word": "touched",
+            "word_translation": "tocó, rozó, contactó"
+        },
+        {
+            "word": "sides",
+            "word_translation": "lados, costados, partes"
+        },
+        {
+            "word": "holding",
+            "word_translation": "sujeto, agarrando, manteniendo"
+        },
+        {
+            "word": "upright",
+            "word_translation": "erguido, vertical, recto"
+        },
+        {
+            "word": "our",
+            "word_translation": "nuestro, nuestra, de nosotros"
+        },
+        {
+            "word": "time",
+            "word_translation": "tiempo, momento, hora"
+        },
+        {
+            "word": "walked",
+            "word_translation": "caminamos, anduvimos, paseamos"
+        },
+        {
+            "word": "slowly",
+            "word_translation": "lentamente, despacio, con lentitud"
+        },
+        {
+            "word": "nobody",
+            "word_translation": "nadie, ningún ser, ninguna persona"
+        },
+        {
+            "word": "realized",
+            "word_translation": "se dio cuenta, se percató, comprendió"
+        },
+        {
+            "word": "every",
+            "word_translation": "cada, todos, cada uno"
+        },
+        {
+            "word": "minute",
+            "word_translation": "minuto, instante, momento"
+        },
+        {
+            "word": "mattered",
+            "word_translation": "importaba, significaba, valía"
+        },
+        {
+            "word": "arrived",
+            "word_translation": "llegó, arribó, alcanzó"
+        },
+        {
+            "word": "she",
+            "word_translation": "ella, ella misma, la mujer"
+        },
+        {
+            "word": "asked",
+            "word_translation": "preguntó, solicitó, inquirió"
+        }
+        ,
+        {
+            "word": "series",
+            "word_translation": "serie, secuencia, conjunto"
+        },
+        {
+            "word": "questions",
+            "word_translation": "preguntas, interrogantes, consultas"
+        },
+        {
+            "word": "what",
+            "word_translation": "qué, cuál, qué cosa"
+        },
+        {
+            "word": "is",
+            "word_translation": "es, está"
+        },
+        {
+            "word": "actually",
+            "word_translation": "realmente, en realidad, de hecho"
+        },
+        {
+            "word": "who",
+            "word_translation": "quién, quiénes"
+        },
+        {
+            "word": "president",
+            "word_translation": "presidente, mandatario, jefe de Estado"
+        },
+        {
+            "word": "united",
+            "word_translation": "Unidos, unificado, conjunto"
+        },
+        {
+            "word": "states",
+            "word_translation": "Estados, países, naciones"
+        },
+        {
+            "word": "said",
+            "word_translation": "dijo, afirmó, expresó"
+        },
+        {
+            "word": "correct",
+            "word_translation": "correcto, preciso, adecuado"
+        },
+        {
+            "word": "answer",
+            "word_translation": "respuesta, contestación, solución"
+        },
+        {
+            "word": "your",
+            "word_translation": "tu, tus, su (de usted)"
+        },
+        {
+            "word": "moms",
+            "word_translation": "de tu mamá, de las madres, de las mamás"
+        },
+        {
+            "word": "name",
+            "word_translation": "nombre, apelativo, denominación"
+        },
+        {
+            "word": "stalled",
+            "word_translation": "se detuvo, se paró, se trabó"
+        },
+        {
+            "word": "ten",
+            "word_translation": "diez, 10"
+        },
+        {
+            "word": "seconds",
+            "word_translation": "segundos, instantes, momentos"
+        },
+        {
+            "word": "passed",
+            "word_translation": "pasaron, transcurrieron, sucedieron"
+        },
+        {
+            "word": "casually",
+            "word_translation": "casualmente, de manera casual, sin preocupación"
+        },
+        {
+            "word": "ignoring",
+            "word_translation": "ignorando, desestimando, desatendiendo"
+        },
+        {
+            "word": "fact",
+            "word_translation": "hecho, realidad, circunstancia"
+        },
+        {
+            "word": "taken",
+            "word_translation": "tomado, recibido, cogido"
+        },
+        {
+            "word": "remember",
+            "word_translation": "recordar, rememorar, acordarse"
+        },
+        {
+            "word": "own",
+            "word_translation": "propio, personal, de uno mismo"
+        },        
+        {
+            "word": "mothers",
+            "word_translation": "madres, mamás, progenitoras"
+        },
+        {
+            "word": "answered",
+            "word_translation": "respondió, contestó, replicó"
+        },
+        {
+            "word": "last",
+            "word_translation": "última, final, pasada"
+        },
+        {
+            "word": "question",
+            "word_translation": "pregunta, consulta, interrogante"
+        },
+        {
+            "word": "body",
+            "word_translation": "cuerpo, organismo, cuerpo humano"
+        },
+        {
+            "word": "unable",
+            "word_translation": "incapaz, incompetente, inhabilitado"
+        },
+        {
+            "word": "handle",
+            "word_translation": "manejar, gestionar, tratar"
+        },
+        {
+            "word": "rapid",
+            "word_translation": "rápido, veloz, acelerado"
+        },
+        {
+            "word": "lost",
+            "word_translation": "perdió, extravió, se desorientó"
+        },
+        {
+            "word": "consciousness",
+            "word_translation": "conciencia, consciencia, percepción"
+        },
+        {
+            "word": "ambulance",
+            "word_translation": "ambulancia, vehículo de emergencia, coche de socorro"
+        },
+        {
+            "word": "minutes",
+            "word_translation": "minutos, instante, momento"
+        },
+        {
+            "word": "later",
+            "word_translation": "después, más tarde, posteriormente"
+        },
+        {
+            "word": "carried",
+            "word_translation": "llevado, transportado, cargado"
+        },
+        {
+            "word": "local",
+            "word_translation": "local, cercano, regional"
+        },
+        {
+            "word": "hospital",
+            "word_translation": "hospital, clínica, sanatorio"
+        },
+        {
+            "word": "Shortly",
+            "word_translation": "poco después, enseguida, en breve"
+        },        
+        {
+            "word": "after",
+            "word_translation": "después, tras, luego de"
+        },
+        {
+            "word": "arriving",
+            "word_translation": "llegando, arribar, alcanzar"
+        },
+        {
+            "word": "body",
+            "word_translation": "cuerpo, organismo, cuerpo humano"
+        },
+        {
+            "word": "shutting",
+            "word_translation": "cerrando, clausurando, bloqueando"
+        },
+        {
+            "word": "struggled",
+            "word_translation": "luchó, batalló, se esforzó"
+        },
+        {
+            "word": "basic",
+            "word_translation": "básico, fundamental, elemental"
+        },
+        {
+            "word": "functions",
+            "word_translation": "funciones, actividades, tareas"
+        },
+        {
+            "word": "like",
+            "word_translation": "como, parecido a, tal como"
+        },
+        {
+            "word": "swallowing",
+            "word_translation": "tragando, deglutiendo, engullendo"
+        },
+        {
+            "word": "breathing",
+            "word_translation": "respirando, inhalando, exhalando"
+        },
+        {
+            "word": "first",
+            "word_translation": "primero, inicial, inicial"
+        },
+        {
+            "word": "seizure",
+            "word_translation": "convulsión, ataque, epilepsia"
+        },
+        {
+            "word": "then",
+            "word_translation": "Luego, entonces, después"
+        },        
+        {
+            "word": "stopped",
+            "word_translation": "detenido, parado"
+        },
+        {
+            "word": "entirely",
+            "word_translation": "completamente, enteramente"
+        },
+        {
+            "word": "doctors",
+            "word_translation": "médicos, doctores"
         },
         {
-            "word":"u-shape",
-            "word_translation":"forma de U"
+            "word": "hurried",
+            "word_translation": "se apresuró, se dio prisa"
         },
         {
-            "word":"collision",
-            "word_translation":"colisión"
+            "word": "supply",
+            "word_translation": "suministro, provisión"
         },
         {
-            "word":"sent",
-            "word_translation":"envió"
+            "word": "oxygen",
+            "word_translation": "oxígeno"
         },
         {
-            "word":"soft",
-            "word_translation":"suave"
+            "word": "they",
+            "word_translation": "ellos"
         },
         {
-            "word":"tissue",
-            "word_translation":"tejido"
+            "word": "also",
+            "word_translation": "también"
         },
         {
-            "word":"brain",
-            "word_translation":"cerebro"
+            "word": "decided",
+            "word_translation": "decidieron, resolvieron"
         },
         {
-            "word":"slamming",
-            "word_translation":"golpeando"
+            "word": "unequipped",
+            "word_translation": "sin equipo, sin preparación"
         },
         {
-            "word":"inside",
-            "word_translation":"dentro"
+            "word": "handle",
+            "word_translation": "manejar, tratar"
         },
         {
-            "word":"skull",
-            "word_translation":"cráneo"
+            "word": "situation",
+            "word_translation": "situación, caso"
         },
         {
-            "word":"immediately",
-            "word_translation":"inmediatamente"
+            "word": "ordered",
+            "word_translation": "ordenaron, mandaron"
         },
         {
-            "word":"wave",
-            "word_translation":"ola"
+            "word": "helicopter",
+            "word_translation": "helicóptero"
         },
         {
-            "word":"swelling",
-            "word_translation":"hinchazón"
+            "word": "fly",
+            "word_translation": "volar, viajar en avión"
         },
         {
-            "word":"surged",
-            "word_translation":"aumentó"
+            "word": "larger",
+            "word_translation": "más grande, mayor"
         },
         {
-            "word":"throughout",
-            "word_translation":"a través de"
+            "word": "cincinnati",
+            "word_translation": "Cincinnati (ciudad de EE. UU.)"
         },
         {
-            "word":"head",
-            "word_translation":"cabeza"
+            "word": "rolled",
+            "word_translation": "rodó, giró"
         },
         {
-            "word":"fraction",
-            "word_translation":"fracción"
+            "word": "emergency",
+            "word_translation": "emergencia, urgencia"
         },
         {
-            "word":"second",
-            "word_translation":"segundo"
+            "word": "room",
+            "word_translation": "sala, habitación"
         },
         {
-            "word":"i",
-            "word_translation":"yo"
+            "word": "doors",
+            "word_translation": "puertas, accesos"
         },
         {
-            "word":"had",
-            "word_translation":"tenía"
+            "word": "helipad",
+            "word_translation": "helipuerto"
         },
         {
-            "word":"broken",
-            "word_translation":"rota"
+            "word": "street",
+            "word_translation": "calle, avenida"
         },
         {
-            "word":"multiple",
-            "word_translation":"múltiples"
+            "word": "stretcher",
+            "word_translation": "camilla"
         },
         {
-            "word":"fractures",
-            "word_translation":"fracturas"
+            "word": "rattled",
+            "word_translation": "sacudido, estremecido"
         },
         {
-            "word":"two",
-            "word_translation":"dos"
+            "word": "bumpy",
+            "word_translation": "accidentado, irregular"
         },
         {
-            "word":"shattered",
-            "word_translation":"destrozadas"
+            "word": "sidewalk",
+            "word_translation": "acera, vereda"
         },
         {
-            "word":"eye",
-            "word_translation":"ojo"
+            "word": "nurse",
+            "word_translation": "enfermera, asistente de salud"
         },
         {
-            "word":"sockets",
-            "word_translation":"cuencas"
+            "word": "pushed",
+            "word_translation": "empujado, presionado"
         },
         {
-            "word":"on",
-            "word_translation":"en"
+            "word": "along",
+            "word_translation": "largo, a lo largo de"
         },
         {
-            "word":"day",
-            "word_translation":"día"
+            "word": "while",
+            "word_translation": "mientras, mientras tanto"
         },
         {
-            "word":"of",
-            "word_translation":"de"
+            "word": "another",
+            "word_translation": "otro, una más"
         },
         {
-            "word":"sophomore",
-            "word_translation":"segundo"
+            "word": "pumped",
+            "word_translation": "bombearon, impulsaron"
         },
         {
-            "word":"year",
-            "word_translation":"año"
+            "word": "each",
+            "word_translation": "cada, uno a uno"
         },
         {
-            "word":"high",
-            "word_translation":"secundaria"
+            "word": "breath",
+            "word_translation": "aliento, respiración"
         },
         {
-            "word":"school",
-            "word_translation":"escuela"
+            "word": "by",
+            "word_translation": "por, al lado de"
         },
         {
-            "word":"was",
-            "word_translation":"estaba"
+            "word": "hand",
+            "word_translation": "mano, mano de obra"
         },
         {
-            "word":"in",
-            "word_translation":"en"
+            "word": "mother",
+            "word_translation": "madre"
         },
         {
-            "word":"baseball",
-            "word_translation":"béisbol"
+            "word": "few",
+            "word_translation": "pocos, unas cuantas"
         },
         {
-            "word":"as",
-            "word_translation":"como"
+            "word": "moments",
+            "word_translation": "momentos, instantes"
         },
         {
-            "word":"classmate",
-            "word_translation":"compañero"
+            "word": "climbed",
+            "word_translation": "subió, ascendió"
         },
         {
-            "word":"took",
-            "word_translation":"tomó"
+            "word": "beside",
+            "word_translation": "al lado, junto a"
         },
         {
-            "word":"full",
-            "word_translation":"completo"
+            "word": "remained",
+            "word_translation": "permaneció, quedó"
         },
         {
-            "word":"swing",
-            "word_translation":"golpe"
+            "word": "unconscious",
+            "word_translation": "inconsciente, desmayado"
         },
         {
-            "word":"hit",
-            "word_translation":"golpe"
+            "word": "breathe",
+            "word_translation": "respirar, inhalar"
         },
         {
-            "word":"slipped",
-            "word_translation":"resbaló"
+            "word": "held",
+            "word_translation": "sostenido, agarrado"
         },
         {
-            "word":"out",
-            "word_translation":"fuera"
+            "word": "during",
+            "word_translation": "durante, a lo largo de"
         },
         {
-            "word":"his",
-            "word_translation":"su"
+            "word": "flight",
+            "word_translation": "vuelo, aeronave"
         },
         {
-            "word":"final",
-            "word_translation":"final"
+            "word": "rode",
+            "word_translation": "viajó, montó"
         },
         {
-            "word":"hands",
-            "word_translation":"manos"
+            "word": "father",
+            "word_translation": "padre, papá"
         },
         {
-            "word":"came",
-            "word_translation":"vino"
+            "word": "went",
+            "word_translation": "fue, marchó"
         },
         {
-            "word":"flying",
-            "word_translation":"volando"
+            "word": "home",
+            "word_translation": "casa, hogar"
         },
         {
-            "word":"toward",
-            "word_translation":"hacia"
+            "word": "check",
+            "word_translation": "revisar, chequear"
         },
         {
-            "word":"me",
-            "word_translation":"mí"
+            "word": "brother",
+            "word_translation": "hermano"
         },
         {
-            "word":"before",
-            "word_translation":"antes"
+            "word": "sister",
+            "word_translation": "hermana"
         },
         {
-            "word":"striking",
-            "word_translation":"golpeando"
+            "word": "break",
+            "word_translation": "dar, romper"
         },
         {
-            "word":"directly",
-            "word_translation":"directamente"
+            "word": "news",
+            "word_translation": "noticia, novedades"
         },
         {
-            "word":"between",
-            "word_translation":"entre"
+            "word": "them",
+            "word_translation": "ellos, ellas"
         },
         {
-            "word":"eyes",
-            "word_translation":"ojos"
+            "word": "choked",
+            "word_translation": "ahogado, atorado"
         },
         {
-            "word":"have",
-            "word_translation":"tener"
+            "word": "he",
+            "word_translation": "él"
         },
         {
-            "word":"no",
-            "word_translation":"no"
+            "word": "tears",
+            "word_translation": "lágrimas, sollozos"
         },
         {
-            "word":"memory",
-            "word_translation":"memoria"
+            "word": "explained",
+            "word_translation": "explicó, explicó detalladamente"
         },
         {
-            "word":"moment",
-            "word_translation":"momento"
+            "word": "would",
+            "word_translation": "podría, haría"
         },
         {
-            "word":"impact",
-            "word_translation":"impacto"
+            "word": "miss",
+            "word_translation": "perder, extrañar"
         },
         {
-            "word":"and",
-            "word_translation":"y"
+            "word": "eighth-grade",
+            "word_translation": "octavo grado"
         },
         {
-            "word":"when",
-            "word_translation":"Cuando"
+            "word": "graduation",
+            "word_translation": "graduación, acto de graduarse"
         },
         {
-            "word":"opened",
-            "word_translation":"abrió"
+            "word": "ceremony",
+            "word_translation": "ceremonia, acto formal"
         },
         {
-            "word":"saw",
-            "word_translation":"vio"
+            "word": "night",
+            "word_translation": "noche, atardecer"
         },
         {
-            "word":"people",
-            "word_translation":"personas"
+            "word": "passing",
+            "word_translation": "pasar, fallecimiento"
         },
         {
-            "word":"staring",
-            "word_translation":"mirando fijamente"
+            "word": "siblings",
+            "word_translation": "hermanos, hermanos y hermanas"
         },
         {
-            "word":"at",
-            "word_translation":"a"
+            "word": "family",
+            "word_translation": "familia, parentesco"
         },
         {
-            "word":"me",
-            "word_translation":"mí"
+            "word": "friends",
+            "word_translation": "amigos, compañeros"
         },
         {
-            "word":"running",
-            "word_translation":"corriendo"
+            "word": "drove",
+            "word_translation": "condujo, manejó"
         },
         {
-            "word":"over",
-            "word_translation":"hacia"
+            "word": "meet",
+            "word_translation": "encontrar, reunir"
         },
         {
-            "word":"to",
-            "word_translation":"a"
+            "word": "mom",
+            "word_translation": "mamá, madre"
         },
         {
-            "word":"help",
-            "word_translation":"ayuda"
+            "word": "landed",
+            "word_translation": "aterrizó, llegó"
         },
         {
-            "word":"looked",
-            "word_translation":"miró"
+            "word": "roof",
+            "word_translation": "techo, azotea"
         },
         {
-            "word":"down",
-            "word_translation":"abajo"
+            "word": "team",
+            "word_translation": "equipo, grupo"
         },
         {
-            "word":"noticed",
-            "word_translation":"notó"
+            "word": "nearly",
+            "word_translation": "casi, aproximadamente"
         },
         {
-            "word":"spots",
-            "word_translation":"manchas"
+            "word": "twenty",
+            "word_translation": "veinte"
         },
         {
-            "word":"red",
-            "word_translation":"rojas"
+            "word": "sprinted",
+            "word_translation": "corrió, salió disparado"
         },
         {
-            "word":"clothes",
-            "word_translation":"ropa"
+            "word": "onto",
+            "word_translation": "hacia, sobre"
         },
         {
-            "word":"one",
-            "word_translation":"Uno"
+            "word": "wheeled",
+            "word_translation": "trasladó, llevó en ruedas"
         },
         {
-            "word":"classmates",
-            "word_translation":"compañeros de clase"
+            "word": "trauma",
+            "word_translation": "trauma, lesión"
         },
         {
-            "word":"shirt",
-            "word_translation":"camisa"
+            "word": "unit",
+            "word_translation": "unidad, módulo"
         },
         {
-            "word":"off",
-            "word_translation":"fuera"
+            "word": "this",
+            "word_translation": "esto, esta cosa"
         },
         {
-            "word":"back",
-            "word_translation":"espalda"
+            "word": "become",
+            "word_translation": "convertirse, llegar a ser"
         },
         {
-            "word":"handed",
-            "word_translation":"entregó"
+            "word": "so",
+            "word_translation": "tan, así que"
         },
         {
-            "word":"used",
-            "word_translation":"usó"
+            "word": "severe",
+            "word_translation": "grave, severo, intenso"
         },
         {
-            "word":"plug",
-            "word_translation":"tapón"
+            "word": "having",
+            "word_translation": "teniendo, poseyendo"
         },
         {
-            "word":"stream",
-            "word_translation":"corriente"
+            "word": "repeated",
+            "word_translation": "repetidos, recurrentes"
         },
         {
-            "word":"blood",
-            "word_translation":"sangre"
+            "word": "post-traumatic",
+            "word_translation": "postraumáticos, posteriores al trauma"
         },
         {
-            "word":"rushing",
-            "word_translation":"corriendo"
+            "word": "seizures",
+            "word_translation": "convulsiones, ataques"
         },
         {
-            "word":"from",
-            "word_translation":"de"
+            "word": "bones",
+            "word_translation": "huesos"
         },
         {
-            "word":"shocked",
-            "word_translation":"conmocionado"
+            "word": "needed",
+            "word_translation": "necesitaban, requerían"
         },
         {
-            "word":"confused",
-            "word_translation":"confundido"
+            "word": "be",
+            "word_translation": "ser, estar"
         },
         {
-            "word":"unaware",
-            "word_translation":"desconocido"
+            "word": "fixed",
+            "word_translation": "reparado, arreglado"
         },
         {
-            "word":"how",
-            "word_translation":"cómo"
+            "word": "but",
+            "word_translation": "pero, sin embargo"
         },
         {
-            "word":"seriously",
-            "word_translation":"seriamente"
+            "word": "condition",
+            "word_translation": "condición, estado"
         },
         {
-            "word":"been",
-            "word_translation":"estado"
+            "word": "undergo",
+            "word_translation": "someterse, pasar por"
         },
         {
-            "word":"injured",
-            "word_translation":"herido"
+            "word": "surgery",
+            "word_translation": "cirugía, operación"
         },
         {
-            "word":"teacher",
-            "word_translation":"maestro"
+            "word": "yet",
+            "word_translation": "aún, todavía"
         },
         {
-            "word":"looped",
-            "word_translation":"enlazó"
+            "word": "third",
+            "word_translation": "tercer"
         },
         {
-            "word":"arm",
-            "word_translation":"brazo"
+            "word": "put",
+            "word_translation": "poner, colocar, situar"
         },
         {
-            "word":"around",
-            "word_translation":"alrededor"
+            "word": "medically",
+            "word_translation": "médicamente, desde el punto de vista médico"
         },
         {
-            "word":"shoulder",
-            "word_translation":"hombro"
+            "word": "induced",
+            "word_translation": "inducido, provocado"
         },
         {
-            "word":"we",
-            "word_translation":"nosotros"
+            "word": "coma",
+            "word_translation": "coma"
         },
         {
-            "word":"began",
-            "word_translation":"comenzamos"
+            "word": "placed",
+            "word_translation": "colocado, puesto"
         },
         {
-            "word":"long",
-            "word_translation":"largo"
+            "word": "ventilator",
+            "word_translation": "ventilador, respirador"
         },
         {
-            "word":"walk",
-            "word_translation":"caminar"
+            "word": "parents",
+            "word_translation": "padres"
         },
         {
-            "word":"nurses",
-            "word_translation":"de la enfermera"
+            "word": "were",
+            "word_translation": "eran, estaban, fueron"
         },
         {
-            "word":"office",
-            "word_translation":"oficina"
+            "word": "strangers",
+            "word_translation": "extraños, desconocidos"
         },
         {
-            "word":"across",
-            "word_translation":"a través de"
+            "word": "years",
+            "word_translation": "años"
         },
         {
-            "word":"field",
-            "word_translation":"campo"
+            "word": "earlier",
+            "word_translation": "antes, previamente"
         },
         {
-            "word":"hill",
-            "word_translation":"colina"
+            "word": "entered",
+            "word_translation": "entraron, ingresaron"
         },
         {
-            "word":"random",
-            "word_translation":"aleatorio"
+            "word": "same",
+            "word_translation": "mismo, igual"
         },
         {
-            "word":"touched",
-            "word_translation":"tocó"
+            "word": "building",
+            "word_translation": "edificio, construcción"
         },
         {
-            "word":"sides",
-            "word_translation":"lados"
+            "word": "ground",
+            "word_translation": "suelo, terreno, tierra"
         },
         {
-            "word":"holding",
-            "word_translation":"sujeto"
+            "word": "floor",
+            "word_translation": "piso, suelo"
         },
         {
-            "word":"upright",
-            "word_translation":"erguido"
+            "word": "diagnosed",
+            "word_translation": "diagnosticado, diagnosticada"
         },
         {
-            "word":"our",
-            "word_translation":"nuestro"
+            "word": "leukemia",
+            "word_translation": "leucemia"
         },
         {
-            "word":"time",
-            "word_translation":"tiempo"
+            "word": "age",
+            "word_translation": "edad, época, era"
         },
         {
-            "word":"walked",
-            "word_translation":"caminamos"
+            "word": "three",
+            "word_translation": "tres"
         },
         {
-            "word":"slowly",
-            "word_translation":"lentamente"
+            "word": "five",
+            "word_translation": "cinco"
         },
         {
-            "word":"nobody",
-            "word_translation":"nadie"
+            "word": "just",
+            "word_translation": "solo, justo, solamente"
         },
         {
-            "word":"realized",
-            "word_translation":"se dio cuenta"
+            "word": "six",
+            "word_translation": "seis"
         },
         {
-            "word":"every",
-            "word_translation":"cada"
+            "word": "months",
+            "word_translation": "meses, mensualidades"
         },
         {
-            "word":"minute",
-            "word_translation":"minuto"
+            "word": "old",
+            "word_translation": "viejo, antiguo, edad"
         },
         {
-            "word":"mattered",
-            "word_translation":"importaba"
+            "word": "half",
+            "word_translation": "mitad, medio, parcial"
         },
         {
-            "word":"arrived",
-            "word_translation":"llegó"
+            "word": "years",
+            "word_translation": "años, etapas"
         },
         {
-            "word":"she",
-            "word_translation":"ella"
+            "word": "chemotherapy",
+            "word_translation": "quimioterapia"
         },
         {
-            "word":"asked",
-            "word_translation":"preguntó"
+            "word": "treatments",
+            "word_translation": "tratamientos, terapias, cuidados"
         },
         {
-            "word":"series",
-            "word_translation":"serie"
+            "word": "spinal",
+            "word_translation": "espinal, vertebral"
         },
         {
-            "word":"questions",
-            "word_translation":"preguntas"
+            "word": "taps",
+            "word_translation": "punciones, golpecitos, grifos"
         },
         {
-            "word":"what",
-            "word_translation":"qué"
+            "word": "bone",
+            "word_translation": "hueso, osamenta"
         },
         {
-            "word":"is",
-            "word_translation":"es"
+            "word": "marrow",
+            "word_translation": "médula, esencia"
         },
         {
-            "word":"actually",
-            "word_translation":"realmente"
+            "word": "biopsies",
+            "word_translation": "biopsias, análisis"
         },
         {
-            "word":"who",
-            "word_translation":"quién"
+            "word": "little",
+            "word_translation": "poco, pequeño, leve"
         },
         {
-            "word":"president",
-            "word_translation":"presidente"
+            "word": "finally",
+            "word_translation": "finalmente, por fin, al fin"
         },
         {
-            "word":"united",
-            "word_translation":"Unidos"
+            "word": "happy",
+            "word_translation": "feliz, contento, alegre"
         },
         {
-            "word":"states",
-            "word_translation":"Estados"
+            "word": "healthy",
+            "word_translation": "saludable, sano, fuerte"
         },
         {
-            "word":"said",
-            "word_translation":"dijo"
+            "word": "cancer",
+            "word_translation": "cáncer"
         },
         {
-            "word":"correct",
-            "word_translation":"correcto"
+            "word": "free",
+            "word_translation": "libre, gratuito, exento"
         },
         {
-            "word":"answer",
-            "word_translation":"respuesta"
+            "word": "now",
+            "word_translation": "ahora, actualmente, en este momento"
         },
         {
-            "word":"your",
-            "word_translation":"tu"
+            "word": "years",
+            "word_translation": "años, etapas"
         },
         {
-            "word":"moms",
-            "word_translation":"de tu mamá"
+            "word": "normal",
+            "word_translation": "normal, común, habitual"
         },
         {
-            "word":"name",
-            "word_translation":"nombre"
+            "word": "life",
+            "word_translation": "vida, existencia, esencia"
         },
         {
-            "word":"stalled",
-            "word_translation":"se detuvo"
+            "word": "parents",
+            "word_translation": "padres, progenitores"
         },
         {
-            "word":"ten",
-            "word_translation":"diez"
+            "word": "found",
+            "word_translation": "encontraron, hallaron, establecido"
         },
         {
-            "word":"seconds",
-            "word_translation":"segundos"
+            "word": "themselves",
+            "word_translation": "ellos mismos, ellas mismas, sí mismos"
         },
         {
-            "word":"passed",
-            "word_translation":"pasaron"
+            "word": "same",
+            "word_translation": "mismo, igual, idéntico"
         },
         {
-            "word":"casually",
-            "word_translation":"casualmente"
+            "word": "place",
+            "word_translation": "lugar, sitio, posición"
         },
         {
-            "word":"ignoring",
-            "word_translation":"ignorando"
+            "word": "different",
+            "word_translation": "diferente, distinto, desigual"
         },
         {
-            "word":"fact",
-            "word_translation":"hecho"
+            "word": "child",
+            "word_translation": "niño, hija, menor"
         },
         {
-            "word":"taken",
-            "word_translation":"tomado"
+            "word": "priest",
+            "word_translation": "sacerdote, cura, padre"
         },
         {
-            "word":"remember",
-            "word_translation":"recordar"
+            "word": "social",
+            "word_translation": "social, comunitario"
         },
         {
-            "word":"own",
-            "word_translation":"propio"
+            "word": "worker",
+            "word_translation": "trabajador, obrero"
         },
         {
-            "word":"mothers",
-            "word_translation":"madres"
+            "word": "comfort",
+            "word_translation": "confort, consuelo, comodidad"
         },
         {
-            "word":"answered",
-            "word_translation":""
+            "word": "met",
+            "word_translation": "conoció, se encontró, encontró"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "decade",
+            "word_translation": "década, período de diez años"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "evening",
+            "word_translation": "noche, tarde, atardecer"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "faded",
+            "word_translation": "desvanecido, descolorido, marchito"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "machines",
+            "word_translation": "máquinas, aparatos"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "kept",
+            "word_translation": "mantuvo, guardó, conservó"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "alive",
+            "word_translation": "vivo, al vivo, con vida"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "slept",
+            "word_translation": "durmió, dormía"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "restlessly",
+            "word_translation": "inquietamente, sin descanso"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "mattressone",
+            "word_translation": "colchón—uno"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "collapse",
+            "word_translation": "colapsar, derrumbarse, desplomarse"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "fatigue",
+            "word_translation": "fatiga, cansancio, agotamiento"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "next",
+            "word_translation": "siguiente, próximo"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "wide",
+            "word_translation": "ancho, amplio"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "awake",
+            "word_translation": "despierto, alerta"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "worry",
+            "word_translation": "preocupación, inquietud"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "tell",
+            "word_translation": "decir, contar, relatar"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "worst",
+            "word_translation": "peor, lo peor"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "nights",
+            "word_translation": "noches"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "ive",
+            "word_translation": "yo he, yo he"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "ever",
+            "word_translation": "alguna vez, nunca"
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         },
         {
-            "word":"",
-            "word_translation":""
+            "word": "",
+            "word_translation": ""
         }
     ]
 }
