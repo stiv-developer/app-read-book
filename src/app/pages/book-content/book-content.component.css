@@ -35,7 +35,7 @@ padding: 0px 20px;
   white-space: nowrap;
   overflow: hidden;
   word-wrap: break-word;
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .tooltip .group.first{
@@ -93,6 +93,10 @@ padding: 0px 20px;
 
 .word:hover {
   background-color: #f0f0f0;
+}
+
+.container .content-text{
+  margin-bottom: 200px;
 }
 
 @media only screen and (min-width: 1200px) {
