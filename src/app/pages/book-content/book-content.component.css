@@ -1,27 +1,104 @@
-.container{
-padding: 0px 20px;
+.container {
+  padding: 0px 20px;
 }
 
-.content .group.second{
-
+h2,h3,h4{
+  text-align: center;
 }
 
-.content .group.second ul{
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;;
+.content-text{
+  height: calc(98vh - 100px);
+  overflow-y: auto;
+  position: relative;
+  margin-bottom: 200px;
+  /* overflow: hidden; */
+}
+/* SCROLLBAR  */
+.content-text::-webkit-scrollbar {
+  width: 12px;
 }
 
-.content .group.second ul li{
-  
+.content-text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
 }
 
-.container .content .group .img-book{
+.content-text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.content-text::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+
+.content-text .space{
   width: 100%;
-  height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}	
+  height: 23px;
+  /* border: 1px solid red; */
+}
 
+/* GROUP ICON  */
+
+.group-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: fixed;
+  overflow: hidden;
+  /* width: calc(100% - 400px); */
+  width: 85%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.group-icon .group .icon-left,
+.group-icon .group .icon-right{
+  cursor: pointer;
+  font-size: 1.3rem;
+  background-color: #615241;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #F8F3ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+#group-second{
+  display: none;
+}
+
+#group-third{
+  display: none;
+}
+
+#group-fourth{
+  display: none;
+}
+
+#group-fifth{
+  display: none;
+}
+
+#group-sixth{
+  display: none;
+}
+
+#group-seventh{
+  display: none;
+}
+
+
+/* ACTIVE CONTENT */
+.active-content {
+  color: #3b1e1e;
+  font-weight: 800;
+}
 /* Estilo del cuadro emergente */
 .tooltip {
   position: absolute;
@@ -38,36 +115,36 @@ padding: 0px 20px;
   max-width: 250px;
 }
 
-.tooltip .group.first{
+.tooltip .group.first {
   display: flex;
   flex-direction: column;
 }
 
-.tooltip .group.first .group-children{
+.tooltip .group.first .group-children {
   display: flex;
   flex-direction: row;
   column-gap: 10px;
   align-items: center;
 }
 
-.tooltip .group.first span{
+.tooltip .group.first span {
   margin: 0;
   font-size: 0.75rem;
   color: #555;
 }
 
-.tooltip .group.first i{
+.tooltip .group.first i {
   cursor: pointer;
   font-size: 1.5rem;
 }
 
-.tooltip .group.second{
+.tooltip .group.second {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
 }
 
-.tooltip .group.second span{
+.tooltip .group.second span {
   color: #555;
   margin: 0;
   font-size: 0.75rem;
@@ -95,25 +172,86 @@ padding: 0px 20px;
   background-color: #f0f0f0;
 }
 
-.container .content-text{
-  margin-bottom: 200px;
+
+/* Content details */
+.content-details {
+  display: flex;
+  flex-direction: column;
+  background-color: #8E7D69;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  height: calc(98vh - 100px);
+  overflow-y: auto;
+}
+
+.content-details::-webkit-scrollbar {
+  width: 12px;
+}
+
+.content-details::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.content-details::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.content-details::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+
+.content-details .img-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content-details h3 {
+  color: #FFF8F1;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.content-details ul {
+  color: #FFF8F1;
+  list-style: none;
+  padding: 0;
+}
+
+.content-details ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:600px) {
+  /* Estilos para dispositivos móviles */
+}
+
+@media only screen and (min-width:600px) and (max-width:768px) {
+  /* Estilos para tablets */
+  .group-icon {
+    width: 92%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para tabletas en modo paisaje y pantallas pequeñas */
+  .group-icon {
+    width: 94%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container{
-    width: 1000px;
-    margin: 0 auto;
-  }
-
-  .container .content{
+  /* Estilos para pantallas de escritorio */
+  .container {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
   }
 
-  .container .content .group{
-    width: 50%;
+  .group-icon {
+    display: none;
   }
-    
+
 }
-
