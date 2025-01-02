@@ -40,13 +40,12 @@ export class BookContentComponent implements OnInit {
   }
 
   prepareText(): void {
-    // const container = document.getElementById('text-container');
-    const container = document.querySelectorAll('.text-container');
+    const containers = document.querySelectorAll('.text-container');
     const tooltip = document.getElementById("tooltip");
     const translationSpan = document.getElementById("translated-word");
     const originalWord = document.getElementById("original-word");
 
-    container?.forEach(containerElement => {
+    containers.forEach(containerElement => {
       containerElement.querySelectorAll('p').forEach(paragraph => {
         const words = paragraph.textContent?.split(/\s+/) || []; // Devide las palabras
         paragraph.innerHTML = ''; // Limpiar el contenido original
@@ -58,6 +57,7 @@ export class BookContentComponent implements OnInit {
 
           span.addEventListener("click", (event) => {
             const rect = span.getBoundingClientRect();
+            const containerRect = containerElement.getBoundingClientRect();
 
             const translationText = this.translation[cleanWord] || "Traducción no disponible"; // Usar 'translation' aquí
             if (translationSpan) {
@@ -67,33 +67,20 @@ export class BookContentComponent implements OnInit {
               originalWord.textContent = cleanWord;
             }
 
-            // Espacio disponible
-            const spaceAbove = rect.top; // Espacio arriba del elemento
-            const spaceBelow = window.innerHeight - rect.bottom; // Espacio debajo del elemento
-
-            // Decide si posicionar arriba o abajo
             if (tooltip) {
-              if (spaceBelow >= tooltip.offsetHeight + 10) {
-                // Mostrar abajo si hay espacio suficiente
-                tooltip.style.top = `${rect.bottom + window.scrollY - 70}px`;
-              } else if (spaceAbove >= tooltip.offsetHeight + 10) {
-                // Mostrar arriba si hay espacio suficiente
-                tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 10}px`;
-              } else {
-                // Por defecto, mostrar abajo si no cabe completamente arriba o abajo
-                tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
-              }
-            }
-
-            // Ajuste horizontal
-            if (tooltip) {
-              tooltip.style.left = `${rect.left + window.scrollX}px`;
-            }
-
-            // Mostrar tooltip
-            if (tooltip) {
+              // Siempre posicionar el tooltip abajo
+              // tooltip.style.top = `${rect.bottom + containerElement.scrollTop}px`;
+              // console.log('tooltip.style.top', tooltip.style.top);
+          
+              // Ajustar la posición horizontal
+              // tooltip.style.left = `${rect.left + containerElement.scrollLeft}px`;
+          
+              // Mostrar el tooltip
+              tooltip.style.top = `${rect.bottom - containerRect.top + containerElement.scrollTop + 90}px`;
+              // tooltip.style.top = `${rect.bottom - containerRect.top + containerElement.scrollTop }px`;
+            tooltip.style.left = `${rect.left - containerRect.left + containerElement.scrollLeft}px`;
               tooltip.style.display = "block";
-            }
+          }
 
             event.stopPropagation(); // Evita que el clic se propague
           });
