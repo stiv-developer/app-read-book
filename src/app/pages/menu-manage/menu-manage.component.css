@@ -1,0 +1,55 @@
+.container {
+    padding: 0px 20px;
+}
+
+/* Estilos para el contenedor del menú */
+.menu-container {
+    position: relative;
+}
+
+/* Estilos para el botón del menú burger */
+.burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Estilos para los elementos del menú */
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+}
+
+.menu-items a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-items a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el menú cuando se hace clic en el botón */
+.menu-items.show {
+    display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /* Estilos para pantallas de escritorio */
+    .container {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+}

@@ -1,32 +1,62 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
+import { BookService } from '../../services/book.service';
+import { Book } from '../../interfaces/book';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-book-content',
   templateUrl: './book-content.component.html',
   styleUrl: './book-content.component.css'
 })
-export class BookContentComponent implements OnInit {
+export class BookContentComponent implements OnInit, AfterViewChecked {
+
+  book: Book | null = null;
 
   inputWord: string = '';
   translationText: string = 'Traducción no disponible';
   translation: { [key: string]: string } = {};
+  activeContentIndex: number = 0;
+  contentPrepared: boolean = false;
 
   currentGroupIndex: number = 0;
+  // groupIds: string[] = [
+  //   'group-first',
+  //   'group-second',
+  //   'group-third',
+  //   'group-fourth',
+  //   'group-fifth',
+  //   'group-sixth',
+  //   'group-seventh'
+  // ];
   groupIds: string[] = [
-    'group-first',
-    'group-second',
-    'group-third',
-    'group-fourth',
-    'group-fifth',
-    'group-sixth',
-    'group-seventh'
+    'group-1',
+    'group-2',
+    'group-3',
+    'group-4',
+    'group-5',
+    'group-6',
+    'group-7'
   ];
 
-  constructor(private translationService: TranslationService) { }
+  constructor(private translationService: TranslationService,
+    private bookService: BookService,
+    private route: ActivatedRoute
+  ) { }
+
 
   ngOnInit(): void {
-    this.prepareText();
+
+    let bookId:string = this.route.snapshot.paramMap.get('id') ?? '';
+
+    // Obtener el contenido del libro
+    this.bookService.getBookContent(bookId).subscribe(
+      (data: Book) => {
+          this.book = data; 
+        this.contentPrepared = false;
+      },
+      error => console.error('Error loading book content:', error)
+    );
 
     // Cargar las traducciones al iniciar el componente
     this.translationService.getTranslations().subscribe(
@@ -36,7 +66,14 @@ export class BookContentComponent implements OnInit {
 
     // Cargar voces al inicializar el componente
     this.playVoice();
+  }
 
+  ngAfterViewChecked(): void {
+    // Preparar el texto después de que la vista se haya verificado
+    if (this.book && !this.contentPrepared) {
+      this.prepareText();
+      this.contentPrepared = true; // Marcar que el contenido ya ha sido preparado
+    }
   }
 
   prepareText(): void {
@@ -71,16 +108,16 @@ export class BookContentComponent implements OnInit {
               // Siempre posicionar el tooltip abajo
               // tooltip.style.top = `${rect.bottom + containerElement.scrollTop}px`;
               // console.log('tooltip.style.top', tooltip.style.top);
-          
+
               // Ajustar la posición horizontal
               // tooltip.style.left = `${rect.left + containerElement.scrollLeft}px`;
-          
+
               // Mostrar el tooltip
               tooltip.style.top = `${rect.bottom - containerRect.top + containerElement.scrollTop + 90}px`;
               // tooltip.style.top = `${rect.bottom - containerRect.top + containerElement.scrollTop }px`;
-            tooltip.style.left = `${rect.left - containerRect.left + containerElement.scrollLeft}px`;
+              tooltip.style.left = `${rect.left - containerRect.left + containerElement.scrollLeft}px`;
               tooltip.style.display = "block";
-          }
+            }
 
             event.stopPropagation(); // Evita que el clic se propague
           });
@@ -174,6 +211,13 @@ export class BookContentComponent implements OnInit {
     if (selectedGroup) {
       selectedGroup.style.display = 'block';
     }
+
+    // Actualizar el índice del contenido activo
+    if (selectedGroup) {
+      this.activeContentIndex = Array.from(allGroups).indexOf(selectedGroup);
+    }
+
+    // this.prepareText();
   }
 
   showGroup(index: number): void {

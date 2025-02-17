@@ -1,0 +1,184 @@
+
+
+.group{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+}
+
+.group-list-chapter{
+
+}
+
+.group-list-chapter .group-card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.group-list-chapter .group-card .card{
+    background-color: #D9D9D9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 95%;
+    position: relative;
+}
+
+.group-list-chapter .group-card .card p{
+    margin: 0;
+}
+
+.group-list-chapter .group-card .card .container-btn{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+.group-list-chapter .group-card .card .container-btn button{
+    background-color: #4D4A4A;
+    color: white;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+/* CREATE FORM */
+.group-add-chapter{
+    display: block;
+}
+
+.group-add-chapter .card{
+    background-color: #AEAAA6;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 10px;
+}
+.group-add-chapter .card form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.group-add-chapter .card h2{
+    color: #FFF8F1;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.group-add-chapter .card .form-control{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.group-add-chapter .card .form-control label{
+    color: #FFF8F1;
+}
+
+.group-add-chapter .card .form-control input{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px;
+}
+
+.group-add-chapter .card .form-control textarea{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-family: "Roboto", serif;
+}
+
+.group-add-chapter .card .form-control button{
+    background-color: #4D4A4A;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgb(161, 161, 161);
+    font-weight: bold;
+}
+
+/* UPDATE FORM */
+
+.group-update-chapter{
+    /* display: none; */
+}
+
+.group-update-chapter .card{
+    background-color: #AEAAA6;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 10px;
+}
+
+.group-update-chapter .card h2{
+    color: #FFF8F1;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.group-update-chapter .card .form-control{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.group-update-chapter .card .form-control label{
+    color: #FFF8F1;
+}
+
+.group-update-chapter .card .form-control input{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px;
+}
+
+.group-update-chapter .card .form-control textarea{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-family: "Roboto", serif;
+}
+
+.group-update-chapter .card .form-control button{
+    background-color: #4D4A4A;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgb(161, 161, 161);
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+::ng-deep .p-dropdown {
+    height: 35px;
+    width: 98%;
+}
+
+::ng-deep .p-dropdown-panel .p-dropdown-items {
+    max-height: 250px;
+}
+
+::ng-deep .p-dropdown .p-dropdown-label.p-placeholder{
+    padding-top: 5px;
+}
+
+::ng-deep .p-dropdown .p-dropdown-label {
+    padding-top: 5px;
+}
+

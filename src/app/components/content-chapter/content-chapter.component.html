@@ -1,0 +1,73 @@
+<div class="group">
+    <div class="group-list-chapter">
+        <h1 class="title-chapter" *ngIf="contentBook">{{contentBook.chapterName}}</h1>
+        <div class="group-card overflow-scroll surface-overlay pt-3"  style="height: 500px">
+            <div class="card" *ngFor="let content of contentBook?.chapters">
+                <p>{{content.description}}</p>
+                <div class="container-btn">
+                    <button (click)="changeForm(content)"><i class="pi pi-pencil"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{ 'hidden': isUpdating }" class="group-add-chapter">
+        <div class="card">
+            <form [formGroup]="contentChapterForm">
+                <h2>Add</h2>
+                <div class="form-control">
+                    <label for="type" class="font-semibold w-6rem">Type</label>
+                    <p-dropdown formControlName="type" [options]="types"  optionLabel="name" placeholder="Select a type" />
+                    <!-- <input type="text" pInputText class="flex-auto h-2rem" autocomplete="off" formControlName="type"> -->
+
+                    <!-- <small class="error"
+                        *ngIf="contentChapterForm.get('type')?.invalid && contentChapterForm.get('type')?.touched">
+                        Type is required
+                    </small> -->
+                </div>
+                <div class="form-control">
+                    <label for="position" class="font-semibold w-6rem">Position</label>
+                    <p-inputNumber class="flex-auto h-2rem" formControlName="position" [min]="0" [max]="100"
+                        [useGrouping]="false"></p-inputNumber>
+                    <small class="error"
+                        *ngIf="contentChapterForm.get('position')?.invalid && contentChapterForm.get('position')?.touched">
+                        Position is required
+                    </small>
+                </div>
+                <div class="form-control">
+                    <label for="description" class="font-semibold w-6rem">Description</label>
+                    <textarea rows="10" cols="30" pInputTextarea [autoResize]="true" formControlName="description"></textarea>
+                    <small class="error"
+                        *ngIf="contentChapterForm.get('description')?.invalid && contentChapterForm.get('description')?.touched">
+                        Description is required
+                    </small>
+                </div>
+                <div class="form-control">
+                    <button (click)="createContentChapter()">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div [ngClass]="{ 'hidden': !isUpdating }" class="group-update-chapter">
+        <div class="card">
+            <h2>Update</h2>
+            <div class="form-control">
+                <label for="">Type</label>
+                <input type="text" [(ngModel)]="selectedContentBook.type">
+            </div>
+            <div class="form-control">
+                <label for="">Position</label>
+                <input type="number" [(ngModel)]="selectedContentBook.position" required>
+            </div>
+            <div class="form-control">
+                <label for="">Description</label>
+                <textarea id="w3review" name="w3review" rows="10" cols="35"
+                    [(ngModel)]="selectedContentBook.description" required> </textarea>
+            </div>
+            <div class="form-control">
+                <button (click)="updateContentChapter()">Update</button>
+                <button (click)="deleteContentChapter(selectedContentBook.id)">Delete</button>
+                <button (click)="resetForm()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

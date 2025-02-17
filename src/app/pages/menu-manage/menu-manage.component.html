@@ -1,0 +1,12 @@
+
+<div class="menu-container">
+    <button class="burger-menu" (click)="toggleMenu()">&#9776;</button>
+    <div class="menu-items" [class.show]="menuVisible">
+        <a routerLink="/manage/book">Book</a>
+        <a routerLink="/manage/content-book">Content Book</a>
+        <!-- <a routerLink="/manage/content-chapter">Content Chapter</a> -->
+    </div>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

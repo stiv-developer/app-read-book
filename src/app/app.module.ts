@@ -1,26 +1,62 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './pages/menu/menu.component';
 import { ListBookComponent } from './pages/list-book/list-book.component';
 import { BookContentComponent } from './pages/book-content/book-content.component';
+import { CommonModule } from '@angular/common';
+// PRIME NG
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { ContentChapterComponent } from './components/content-chapter/content-chapter.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import { BookComponent } from './components/book/book.component';
+import { DialogModule } from 'primeng/dialog';
+import { MenuManageComponent } from './pages/menu-manage/menu-manage.component';
+import { ContentBookComponent } from './components/content-book/content-book.component';
+import { ListContentBookComponent } from './components/content-book/list-content-book/list-content-book.component';
+import { ListContentComponent } from './components/content-book/list-content/list-content.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { FileUploadModule } from 'primeng/fileupload';
+import { MessageService } from 'primeng/api';
 
+// REACTIVE FORM
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ListBookComponent,
-    BookContentComponent
+    BookContentComponent,
+    ContentChapterComponent,
+    BookComponent,
+    MenuManageComponent,
+    ContentBookComponent,
+    ListContentBookComponent,
+    ListContentComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    ButtonModule,
+    InputTextModule,
+    InputNumberModule,
+    DropdownModule,
+    FormsModule,
+    DialogModule,
+    ReactiveFormsModule,
+    InputTextareaModule,
+    FileUploadModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

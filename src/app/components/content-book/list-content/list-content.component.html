@@ -1,0 +1,66 @@
+<div class="group-options">
+    <div class="group first">
+        <h2 *ngIf="book">{{book.title}}</h2>
+    </div>
+    <div class="group second">
+        <p class="total-book">{{totalChapters}} chapters</p>
+        <input class="search" type="text" placeholder="Search">
+        <button (click)="showDialog()" class="btn-add-book"><i class="pi pi-plus"
+                style="font-size: 0.85rem;margin-right: 5px;"></i>Add Chapter</button>
+                <form [formGroup]="contentBookForm">
+                    <p-dialog header="Add Chapter" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+                        <div class="flex flex-column gap-3 mb-3">
+                            <label for="username" class="font-semibold">Chapter name</label>
+                            <input pInputText class="flex-auto h-2rem" autocomplete="off"  formControlName="chapterName"/>
+                            <small class="error" *ngIf="contentBookForm.get('chapterName')?.invalid && contentBookForm.get('chapterName')?.touched">
+                                Author is required (min 3 chars)
+                            </small>
+                        </div>
+                        <div class="flex flex-column gap-3 mb-3">
+                            <label for="email" class="font-semibold">Position</label>
+                            <p-inputNumber id="star" class="flex-auto h-2rem" formControlName="position"
+                                [useGrouping]="false"></p-inputNumber>
+                                <small class="error" *ngIf="contentBookForm.get('position')?.invalid && contentBookForm.get('position')?.touched">
+                                    Position must be between 1 and 100
+                                </small>
+                        </div>
+                        <div class="flex justify-content-end gap-2">
+                            <p-button label="Cancel" severity="secondary" (onClick)="visible = false" />
+                            <p-button label="Save" (click)="createContentBook()" [disabled]="contentBookForm.invalid" />
+                        </div>
+                    </p-dialog>
+                </form>
+    </div>
+
+</div>
+<div *ngIf="book">
+    <div class="list-content" *ngFor="let content of book.contents">
+        <div class="content">
+            <div class="group first">
+                <p class="number">{{ content.position }}</p>
+                <h3>{{ content.chapterName }}</h3>
+            </div>
+            <div class="group second">
+                <button class="btn-update" (click)="showUpdateDialog(content)">Update</button>
+                <button class="btn-update" (click)="addContentChapter(content.id)">Add Content</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p-dialog header="Update Book" [modal]="true" [(visible)]="visibleUpdate" [style]="{ width: '25rem' }">
+
+    <div class="flex flex-column gap-3 mb-3">
+        <label for="update-title" class="font-semibold">Chapter Name</label>
+        <input pInputText class="flex-auto h-2rem" [(ngModel)]="selectedContentBook.chapterName" />
+    </div>
+    <div class="flex flex-column gap-3 mb-3">
+        <label for="update-star" class="font-semibold">Position</label>
+        <p-inputNumber id="update-star" class="flex-auto h-2rem" [(ngModel)]="selectedContentBook.position" [min]="0"
+            [max]="100" [useGrouping]="false"></p-inputNumber>
+    </div>
+    <div class="flex justify-content-end gap-2">
+        <p-button label="Cancel" severity="secondary" (click)="visibleUpdate = false" />
+        <p-button label="Update" (click)="updateContentBook()" />
+    </div>
+</p-dialog>

@@ -1,0 +1,57 @@
+
+.group-options{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: end;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.group-options .total-book{
+    color: #454343;
+}
+
+.group-options .search{
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #958D8D;
+    padding-left: 8px;
+}
+
+.group-options .btn-add-book{
+    outline: none;
+    height: 35px;
+    background: #4D4A4A;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Roboto", serif;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    list-style: none;
+    padding: 0;
+}	
+
+.btn-edit-book{
+    background: #4D4A4A;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Roboto", serif;
+}	
+
+@media only screen and (min-width: 1200px) {
+
+}
