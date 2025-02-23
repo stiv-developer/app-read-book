@@ -3,6 +3,7 @@ import { TranslationService } from '../../services/translation.service';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../interfaces/book';
 import { ActivatedRoute } from '@angular/router';
+import { ImageBookService } from '../../services/image-book.service';
 
 @Component({
   selector: 'app-book-content',
@@ -12,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class BookContentComponent implements OnInit, AfterViewChecked {
 
   book: Book | null = null;
+  imageBook: any | null = null;
 
   inputWord: string = '';
   translationText: string = 'Traducción no disponible';
@@ -41,19 +43,21 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
 
   constructor(private translationService: TranslationService,
     private bookService: BookService,
+    private imageBookService: ImageBookService,
     private route: ActivatedRoute
   ) { }
 
 
   ngOnInit(): void {
 
-    let bookId:string = this.route.snapshot.paramMap.get('id') ?? '';
+    let bookId: string = this.route.snapshot.paramMap.get('id') ?? '';
 
     // Obtener el contenido del libro
     this.bookService.getBookContent(bookId).subscribe(
       (data: Book) => {
-          this.book = data; 
+        this.book = data;
         this.contentPrepared = false;
+        this.getImageBook(data.img);
       },
       error => console.error('Error loading book content:', error)
     );
@@ -64,8 +68,20 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
       error => console.error('Error loading translations:', error)
     );
 
+
+
     // Cargar voces al inicializar el componente
     this.playVoice();
+  }
+
+  getImageBook(id:string) {
+    this.imageBookService.getByIdImageBook(id).subscribe({
+      next: (data) => {
+        this.imageBook = data;
+        console.log(this.imageBook)
+      },
+      error: error => console.log("Error get image book", error)
+    });
   }
 
   ngAfterViewChecked(): void {
@@ -84,6 +100,11 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
 
     containers.forEach(containerElement => {
       containerElement.querySelectorAll('p').forEach(paragraph => {
+
+        if (paragraph.querySelector('img')) {
+          return; // Si hay una imagen, salir y no modificarlo
+        }
+
         const words = paragraph.textContent?.split(/\s+/) || []; // Devide las palabras
         paragraph.innerHTML = ''; // Limpiar el contenido original
         words.forEach((word, index) => {
@@ -102,19 +123,11 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
             }
             if (originalWord) {
               originalWord.textContent = cleanWord;
+              console.log(originalWord.textContent)
             }
 
             if (tooltip) {
-              // Siempre posicionar el tooltip abajo
-              // tooltip.style.top = `${rect.bottom + containerElement.scrollTop}px`;
-              // console.log('tooltip.style.top', tooltip.style.top);
-
-              // Ajustar la posición horizontal
-              // tooltip.style.left = `${rect.left + containerElement.scrollLeft}px`;
-
-              // Mostrar el tooltip
               tooltip.style.top = `${rect.bottom - containerRect.top + containerElement.scrollTop + 90}px`;
-              // tooltip.style.top = `${rect.bottom - containerRect.top + containerElement.scrollTop }px`;
               tooltip.style.left = `${rect.left - containerRect.left + containerElement.scrollLeft}px`;
               tooltip.style.display = "block";
             }
