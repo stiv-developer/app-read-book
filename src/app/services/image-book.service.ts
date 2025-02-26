@@ -17,6 +17,10 @@ export class ImageBookService {
     return this.http.post(`${environment.apiUrl}/api/image-book`, ImageBook);
   }
 
+  // createImageBook2(ImageBook: any): Observable<any>{
+  //   return this.http.post(`${environment.apiUrl}/api/image-book`, ImageBook);
+  // }
+
   deleteImageBook(id: string): Observable<any> {
     return this.http.delete(`${environment.apiUrl}/api/image-book/${id}`);
   }

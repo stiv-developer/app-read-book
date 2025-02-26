@@ -1,8 +1,12 @@
 
 .cards{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    /* flex-direction: row; */
     padding: 0px 10px;
+    column-gap: 20px;
+    grid-template-columns: 4fr 4fr 4fr;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
 .card{
@@ -66,7 +70,7 @@ cursor: pointer;
 
 @media only screen and (min-width: 1200px){
     .cards{
-        width: 1000px;
+        width: 1200px;
         margin: 0 auto;
     }
     

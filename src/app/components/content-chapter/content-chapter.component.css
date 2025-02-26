@@ -1,21 +1,17 @@
-
-
-.group{
+.group {
     display: grid;
     grid-template-columns: 9fr 3fr;
 }
 
-.group-list-chapter{
+.group-list-chapter {}
 
-}
-
-.group-list-chapter .group-card{
+.group-list-chapter .group-card {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.group-list-chapter .group-card .card{
+.group-list-chapter .group-card .card {
     background-color: #D9D9D9;
     padding: 15px 20px;
     border-radius: 10px;
@@ -23,16 +19,17 @@
     position: relative;
 }
 
-.group-list-chapter .group-card .card p{
+.group-list-chapter .group-card .card p {
     margin: 0;
 }
 
-.group-list-chapter .group-card .card .container-btn{
+.group-list-chapter .group-card .card .container-btn {
     position: absolute;
     right: -10px;
     top: -10px;
 }
-.group-list-chapter .group-card .card .container-btn button{
+
+.group-list-chapter .group-card .card .container-btn button {
     background-color: #4D4A4A;
     color: white;
     border-radius: 50%;
@@ -44,11 +41,11 @@
 }
 
 /* CREATE FORM */
-.group-add-chapter{
+.group-add-chapter {
     display: block;
 }
 
-.group-add-chapter .card{
+.group-add-chapter .card {
     background-color: #AEAAA6;
     padding: 25px;
     display: flex;
@@ -56,36 +53,37 @@
     row-gap: 20px;
     border-radius: 10px;
 }
-.group-add-chapter .card form{
+
+.group-add-chapter .card form {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.group-add-chapter .card h2{
+.group-add-chapter .card h2 {
     color: #FFF8F1;
     text-align: center;
     margin-bottom: 0;
 }
 
-.group-add-chapter .card .form-control{
+.group-add-chapter .card .form-control {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
 }
 
-.group-add-chapter .card .form-control label{
+.group-add-chapter .card .form-control label {
     color: #FFF8F1;
 }
 
-.group-add-chapter .card .form-control input{
+.group-add-chapter .card .form-control input {
     border-radius: 5px;
     outline: none;
     border: none;
     padding: 8px;
 }
 
-.group-add-chapter .card .form-control textarea{
+.group-add-chapter .card .form-control textarea {
     border-radius: 5px;
     outline: none;
     border: none;
@@ -93,7 +91,7 @@
     font-family: "Roboto", serif;
 }
 
-.group-add-chapter .card .form-control button{
+.group-add-chapter .card .form-control button {
     background-color: #4D4A4A;
     color: white;
     padding: 10px;
@@ -106,11 +104,11 @@
 
 /* UPDATE FORM */
 
-.group-update-chapter{
+.group-update-chapter {
     /* display: none; */
 }
 
-.group-update-chapter .card{
+.group-update-chapter .card {
     background-color: #AEAAA6;
     padding: 25px;
     display: flex;
@@ -119,30 +117,30 @@
     border-radius: 10px;
 }
 
-.group-update-chapter .card h2{
+.group-update-chapter .card h2 {
     color: #FFF8F1;
     text-align: center;
     margin-bottom: 0;
 }
 
-.group-update-chapter .card .form-control{
+.group-update-chapter .card .form-control {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
 }
 
-.group-update-chapter .card .form-control label{
+.group-update-chapter .card .form-control label {
     color: #FFF8F1;
 }
 
-.group-update-chapter .card .form-control input{
+.group-update-chapter .card .form-control input {
     border-radius: 5px;
     outline: none;
     border: none;
     padding: 8px;
 }
 
-.group-update-chapter .card .form-control textarea{
+.group-update-chapter .card .form-control textarea {
     border-radius: 5px;
     outline: none;
     border: none;
@@ -150,7 +148,7 @@
     font-family: "Roboto", serif;
 }
 
-.group-update-chapter .card .form-control button{
+.group-update-chapter .card .form-control button {
     background-color: #4D4A4A;
     color: white;
     padding: 10px;
@@ -174,11 +172,34 @@
     max-height: 250px;
 }
 
-::ng-deep .p-dropdown .p-dropdown-label.p-placeholder{
+::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
     padding-top: 5px;
 }
 
 ::ng-deep .p-dropdown .p-dropdown-label {
     padding-top: 5px;
+}
+
+.rich-content {
+    width: 1000px;
+    max-width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.rich-content img,
+.rich-content table,
+.rich-content div {
+    max-width: 100%;
+    height: auto;
+}
+
+.rich-content table {
+    width: 100%;
+}
+
+.rich-content pre {
+    white-space: pre-wrap;
+    /* background-color: black !important; */
 }
 

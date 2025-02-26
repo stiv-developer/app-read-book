@@ -226,6 +226,16 @@ h2,h3,h4{
   cursor: pointer;
 }
 
+::ng-deep .rich-content pre {
+  white-space: pre-wrap;
+  background: black !important;
+  width: 90%;
+  font-family: "Fira Code", "Courier New", monospace;
+  color: white; /* Para que el texto sea visible */
+  padding: 10px;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width:600px) {
   /* Estilos para dispositivos móviles */
 }

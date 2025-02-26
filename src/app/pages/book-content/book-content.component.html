@@ -19,18 +19,7 @@
                 <h2>{{ content.chapterName }}</h2>
                 <div class="text-container">
                     <div *ngFor="let chapter of content?.chapters">
-                        <ng-container [ngSwitch]="chapter.type">
-                            <h1 *ngSwitchCase="'h1'">{{ chapter.description }}</h1>
-                            <h2 *ngSwitchCase="'h2'">{{ chapter.description }}</h2>
-                            <h3 *ngSwitchCase="'h3'">{{ chapter.description }}</h3>
-                            <h4 *ngSwitchCase="'h4'">{{ chapter.description }}</h4>
-                            <h5 *ngSwitchCase="'h5'">{{ chapter.description }}</h5>
-                            <h6 *ngSwitchCase="'h6'">{{ chapter.description }}</h6>
-                            <p *ngSwitchDefault>{{ chapter.description }}</p>
-                        </ng-container>
-                        <ng-template #paragraph>
-                            <p>{{ chapter.description }}</p>
-                        </ng-template>
+                        <div class="rich-content" [innerHTML]="chapter.description"></div>
                     </div>
                 </div>
             </div>
@@ -52,9 +41,9 @@
     <div class="group third">
         <div class="content-details">
             <div class="img-container">
-                <img src="assets/img-book/img-habits-atomic.png" alt="">
+                <img [src]="imageBook.routeFile || 'assets/default-book.jpg'"  alt="">
             </div>
-            <h3>Atomic Habits</h3>
+            <h3>{{book?.title}}</h3>
             <ul>
                 <li *ngFor="let content of book?.contents; let i = index" 
                     [ngClass]="{'active-content': i === 0}" 
@@ -62,16 +51,6 @@
                     {{ content.chapterName }}
                 </li>
             </ul>
-            <!-- <ul>
-                <li class="active-content" (click)="toggleContent($event, 'group-first')">Introduction</li>
-                <li (click)="toggleContent($event, 'group-second')">Why Tiny Changes Make a Big Difference</li>
-                <li (click)="toggleContent($event, 'group-third')">Make It Obvious</li>
-                <li (click)="toggleContent($event, 'group-fourth')">Make It Attractive</li>
-                <li (click)="toggleContent($event, 'group-fifth')">Make It Easy</li>
-                <li (click)="toggleContent($event, 'group-sixth')">Make It Satisfying</li>
-                <li (click)="toggleContent($event, 'group-seventh')">How to Go from Being Merely Good to Being Truly
-                    Great</li>
-            </ul> -->
         </div>
     </div>
 </div>

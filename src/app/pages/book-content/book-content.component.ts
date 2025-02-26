@@ -21,6 +21,8 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
   activeContentIndex: number = 0;
   contentPrepared: boolean = false;
 
+  translatedWord:string = '';
+
   currentGroupIndex: number = 0;
   // groupIds: string[] = [
   //   'group-first',
@@ -113,17 +115,22 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
           span.textContent = word;
           span.className = "word";
 
-          span.addEventListener("click", (event) => {
+          span.addEventListener("click", async (event) => {
             const rect = span.getBoundingClientRect();
             const containerRect = containerElement.getBoundingClientRect();
 
-            const translationText = this.translation[cleanWord] || "Traducción no disponible"; // Usar 'translation' aquí
+            //Here
+            console.log("CleanWord: ",cleanWord)
+            const translatedWord = await this.getWord(cleanWord); 
+            // const translationText = this.translation[cleanWord] || "Traducción no disponible";
+            const translationText = translatedWord || "Traducción no disponible";
+            console.log("translationText", translationText)
             if (translationSpan) {
               translationSpan.textContent = translationText;
             }
             if (originalWord) {
               originalWord.textContent = cleanWord;
-              console.log(originalWord.textContent)
+              // console.log(originalWord.textContent)
             }
 
             if (tooltip) {
@@ -270,6 +277,23 @@ export class BookContentComponent implements OnInit, AfterViewChecked {
       this.currentGroupIndex--;
       this.showGroup(this.currentGroupIndex);
     }
+  }
+
+  getWord(word: string): Promise<string> {
+    return new Promise((resolve) => {
+      this.translationService.getTranslationByWord(word).subscribe({
+        next: (data) => {
+          const words = data.translations?.['es']?.words?.join(", ") || "Traducción no disponible";
+          this.translatedWord = words;
+          resolve(words);
+        },
+        error: (err) => {
+          console.error("No se encontró la palabra", err);
+          this.translatedWord = '';
+          resolve("Traducción no disponible");
+        }
+      });
+    });
   }
 
 

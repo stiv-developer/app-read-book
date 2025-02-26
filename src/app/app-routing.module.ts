@@ -9,54 +9,60 @@ import { ListContentBookComponent } from './components/content-book/list-content
 import { ListContentComponent } from './components/content-book/list-content/list-content.component';
 import { ListBookComponent } from './pages/list-book/list-book.component';
 import { BookContentComponent } from './pages/book-content/book-content.component';
+import { TranslationComponent } from './pages/translation/translation.component';
 
 const routes: Routes = [
-    {
-      path: 'menu',
-      component: MenuComponent,
-      children: [
-        {
-          path: '',
-          component: ListBookComponent
-        },
-        {
-          path: 'content/:id',
-          component: BookContentComponent
-        }
-      ]
-    },
-    {
-      path: 'manage',
-      component: MenuManageComponent,
-      children: [
-        {
-          path: '',
-          component: BookComponent
-        },
-        {
-          path: 'book',
-          component: BookComponent
-        },
-        {
-          path: 'content-book',
-          component: ContentBookComponent,
-          children:[
-            {
-              path: '',
-              component: ListContentBookComponent
-            },
-            {
-              path: 'list/:id',
-              component: ListContentComponent
-            },
-            {
-              path: 'content-chapter/:id',
-              component: ContentChapterComponent
-            }
-          ]
-        }
-      ]
-    },
+  {
+    path: 'menu',
+    component: MenuComponent,
+    children: [
+      {
+        path: '',
+        component: ListBookComponent
+      },
+      {
+        path: 'content/:id',
+        component: BookContentComponent
+      }
+    ]
+  },
+  {
+    path: 'manage',
+    component: MenuManageComponent,
+    children: [
+      {
+        path: '',
+        component: BookComponent
+      },
+      {
+        path: 'book',
+        component: BookComponent
+      },
+      {
+        path: 'content-book',
+        component: ContentBookComponent,
+        children: [
+          {
+            path: '',
+            component: ListContentBookComponent
+          },
+          {
+            path: 'list/:id',
+            component: ListContentComponent
+          },
+          {
+            path: 'content-chapter/:id',
+            component: ContentChapterComponent
+          },
+
+        ]
+      },
+      {
+        path: 'translation',
+        component: TranslationComponent
+      }
+    ]
+  },
   // {
   //   path: '',
   //   component: ListBookComponent,
@@ -93,7 +99,7 @@ const routes: Routes = [
   // },
   {
     path: '**',
-    redirectTo:'/menu',
+    redirectTo: '/menu',
   }
 ];
 

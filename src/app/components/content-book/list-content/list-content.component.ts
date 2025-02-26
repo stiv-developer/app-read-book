@@ -13,69 +13,80 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ListContentComponent implements OnInit {
 
-  book: Book |  null = null;
+  book: Book | null = null;
 
   visible: boolean = false;
   visibleUpdate: boolean = false;
 
   contentBook: ContentBook[] = [];
   contentBookForm!: FormGroup;
-
-  title: string = '';
-  author: string = '';
-  star: number = 0;
+  contentBookUpdateForm!: FormGroup;
 
   totalChapters?: number = 0;
 
   selectedContentBook: any = {};
 
   constructor(private router: Router,
-              private bookService: BookService,
-              private route: ActivatedRoute,
-              private contentBookService: ContentBookService,
-              private fb:FormBuilder
+    private bookService: BookService,
+    private route: ActivatedRoute,
+    private contentBookService: ContentBookService,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
-    //FORM
-    this.contentBookForm = this.fb.group({
-      chapterName: ['',[Validators.required, Validators.minLength(3)]],
-      position: ['',[Validators.required, Validators.min(1), Validators.max(100)]],
-    })
+    this.initForms();
+    this.loadContentBooks();
+  }
 
-    // Obtener ID de la URL
+  loadContentBooks(): void {
     const bookId = this.route.snapshot.paramMap.get('id');
-    if(bookId){
+    if (bookId) {
       this.bookService.getBookContent(bookId).subscribe(
         (data: Book) => {
           this.book = data;
-          this.book.contents.sort((a:any, b:any) => a.position - b.position);
+          this.book.contents.sort((a: any, b: any) => a.position - b.position);
           this.totalChapters = data.contents.length;
         },
         error => console.error('Error loading books:', error)
       )
-    } else{
+    } else {
       console.error("ID no encontrado")
     }
   }
 
+  initForms(): void {
+    this.contentBookForm = this.fb.group({
+      chapterName: ['', [Validators.required, Validators.minLength(3)]],
+      position: ['', [Validators.required, Validators.min(1), Validators.max(100)]],
+    });
+
+    this.contentBookUpdateForm = this.fb.group({
+      chapterName: ['', [Validators.required, Validators.minLength(3)]],
+      position: ['', [Validators.required, Validators.min(1), Validators.max(100)]],
+    })
+  }
+
   showDialog() {
-    console.log('show dialog');
     this.visible = true;
   }
 
-  showUpdateDialog(contentBook:any){
-    this.selectedContentBook = { ...contentBook};
+  showUpdateDialog(contentBook: ContentBook) {
+    this.selectedContentBook = { ...contentBook };
+    this.contentBookUpdateForm.patchValue({
+      chapterName: contentBook.chapterName,
+      position: contentBook.position
+    })
+
     this.visibleUpdate = true;
   }
 
-  addContentChapter(id:string){
+  navigateToContentChapter(id: string): void {
     this.router.navigate(['manage/content-book/content-chapter', id]);
   }
 
-  createContentBook(){
+  createContentBook() {
 
-    let bookId:string = this.route.snapshot.paramMap.get('id') ?? '';
+    let bookId: string = this.route.snapshot.paramMap.get('id') ?? '';
 
     const newContentBook = {
       chapterName: this.contentBookForm.value.chapterName,
@@ -84,10 +95,6 @@ export class ListContentComponent implements OnInit {
       bookId: bookId
     }
 
-    this.sendFormData(newContentBook);
-  }
-
-  sendFormData(newContentBook: any){
     this.contentBookService.createContentBook(newContentBook).subscribe({
       next: (data) => {
         // 🔹 Si book y book.contents existen, agregamos el nuevo contenido
@@ -95,9 +102,10 @@ export class ListContentComponent implements OnInit {
           this.book = {
             ...this.book,
             contents: [...this.book.contents, data] // ✅ Agregar nuevo contenido y forzar actualización
-            
+
           };
         }
+        this.refresContentBooks();
         this.totalChapters = this.book?.contents.length;
         this.visible = false;
       },
@@ -105,13 +113,19 @@ export class ListContentComponent implements OnInit {
         console.error("Error al crear ContentBook:", err);
       }
     });
+    // this.sendFormData(newContentBook);
   }
 
-  updateContentBook(){
+  updateContentBook() {
 
-    if(!this.selectedContentBook) return;
+    if (this.contentBookUpdateForm.invalid || !this.selectedContentBook) return;
 
-    this.contentBookService.updateContentBook(this.selectedContentBook).subscribe({
+    const updateContentBook: ContentBook = {
+      ...this.selectedContentBook,
+      ...this.contentBookUpdateForm.value,
+    }
+
+    this.contentBookService.updateContentBook(updateContentBook).subscribe({
       next: () => {
         this.visibleUpdate = false;
         this.refresContentBooks();
@@ -122,9 +136,9 @@ export class ListContentComponent implements OnInit {
     })
   }
 
-  refresContentBooks(){
+  refresContentBooks() {
     const bookId = this.route.snapshot.paramMap.get('id');
-    if(bookId){
+    if (bookId) {
       this.bookService.getBookContent(bookId).subscribe(
         (data: Book) => {
           this.book = data;
@@ -132,11 +146,9 @@ export class ListContentComponent implements OnInit {
         },
         error => console.error('Error loading books:', error)
       )
-    } else{
+    } else {
       console.error("ID no encontrado")
     }
   }
-
-
 
 }

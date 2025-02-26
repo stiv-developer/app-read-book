@@ -24,9 +24,13 @@ import { ListContentComponent } from './components/content-book/list-content/lis
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FileUploadModule } from 'primeng/fileupload';
 import { MessageService } from 'primeng/api';
+import { EditorModule } from 'primeng/editor';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 
 // REACTIVE FORM
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslationComponent } from './pages/translation/translation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuManageComponent,
     ContentBookComponent,
     ListContentBookComponent,
-    ListContentComponent
+    ListContentComponent,
+    TranslationComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +59,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     DialogModule,
     ReactiveFormsModule,
     InputTextareaModule,
-    FileUploadModule
+    FileUploadModule,
+    EditorModule,
+    IconFieldModule,
+    InputIconModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

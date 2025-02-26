@@ -9,26 +9,27 @@ import { Observable } from 'rxjs';
 })
 export class BookService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getBookContent(id: string){
+  getBookContent(id: string) {
     return this.http.get<Book>(`${environment.apiUrl}/api/book/${id}/content`);
   }
 
-  getBookByTitle(title: string){
+  getBookByTitle(title: string) {
     return this.http.get<Book[]>(`${environment.apiUrl}/api/book/title/search?title=${encodeURIComponent(title)}`);
   }
 
-  getBookList(){
+  getBookList() {
     return this.http.get<Book[]>(`${environment.apiUrl}/api/book`);
   }
 
-  createBook(newBook: any): Observable<any>{
+  createBook(newBook: any): Observable<any> {
     return this.http.post(`${environment.apiUrl}/api/book`, newBook);
   }
 
   updateBook(newBook: any): Observable<any> {
     return this.http.put(`${environment.apiUrl}/api/book/${newBook.id}`, newBook);
-}
+  }
+  
 
 }

@@ -45,6 +45,16 @@ export class BookComponent implements OnInit {
 
   }
 
+  loadBooks(): void {
+    this.bookService.getBookList().subscribe(
+      (data) => {
+        this.books = data;
+        this.totalBooks = data.length;
+      },
+      error => console.error('Error loading books:', error)
+    );
+  }
+
   initForms(): void {
     this.bookForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(3)]],
@@ -57,16 +67,6 @@ export class BookComponent implements OnInit {
       author: ['', [Validators.required, Validators.minLength(3)]],
       star: [0, [Validators.required, Validators.min(1), Validators.max(5)]],
     });
-  }
-
-  loadBooks(): void {
-    this.bookService.getBookList().subscribe(
-      (data) => {
-        this.books = data;
-        this.totalBooks = data.length;
-      },
-      error => console.error('Error loading books:', error)
-    );
   }
 
   showDialog() {
@@ -83,11 +83,7 @@ export class BookComponent implements OnInit {
       title: book.title,
       author: book.author,
       star: book.star,
-    }); 
-    // Actualiza los valores del formulario
-    // console.log(book.img)
-    // this.imageBook = book.img ? { routeFile: book.img } : null; 
-    // console.log(this.imageBook)
+    }); // Actualiza los valores del formulario
 
     if (book.img) {
       console.log("Cargando imagen del libro:", book.img);
@@ -273,9 +269,7 @@ export class BookComponent implements OnInit {
   resetForm():void {
     this.bookForm.reset();
     this.selectedFile = null;
-    // this.imageBookId = null;
     this.imageBook = null;
-    // this.visible = false
     this.fileUpload.clear();
   }
 }
