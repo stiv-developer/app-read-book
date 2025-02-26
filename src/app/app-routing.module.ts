@@ -63,40 +63,6 @@ const routes: Routes = [
       }
     ]
   },
-  // {
-  //   path: '',
-  //   component: ListBookComponent,
-  // },
-  // {
-  //   path: 'content',
-  //   component: BookContentComponent,
-  // },
-  // {
-  //   path: 'book-management',
-  //   component: BookComponent
-  // },
-  // { 
-  //   path: 'content-chapter-management',
-  //   component: ContentChapterComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       component: ContentChapterListComponent
-  //     },
-  //     {
-  //       path:'add',
-  //       component: ContentChapterFormComponent
-  //     },
-  //     {
-  //       path: 'edit/:id',
-  //       component: ContentChapterFormComponent
-  //     },
-  //     {
-  //       path: 'delete/:id',
-  //       component: ContentChapterDetailComponent
-  //     }
-  //   ]
-  // },
   {
     path: '**',
     redirectTo: '/menu',
