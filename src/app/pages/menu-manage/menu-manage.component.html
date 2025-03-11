@@ -1,13 +1,27 @@
-
 <div class="menu-container">
     <button class="burger-menu" (click)="toggleMenu()">&#9776;</button>
-    <div class="menu-items" [class.show]="menuVisible">
-        <a routerLink="/manage/book">Book</a>
-        <a routerLink="/manage/content-book">Content Book</a>
-        <a routerLink="/manage/translation">Translation</a>
-        <!-- <a routerLink="/manage/content-chapter">Content Chapter</a> -->
+    <div class="menu-right" [class.show]="menuVisible">
+        <div class="close-menu">
+            <button class="btn-close-menu" (click)="toggleMenu()"><i class="pi pi-times" style="font-size: 1rem"></i></button>
+        </div>
+        <ul class="menu">
+            <li class="menu-item"><p>Home</p>
+                <ul class="sub-menu">
+                    <li><i class="pi pi-home" style="font-size: 1rem"></i>Dashboard</li>
+                </ul>
+            </li>
+            <li class="menu-item"><p>Manage</p>
+                <ul class="sub-menu">
+                    <li routerLink="/manage/book"><i class="pi pi-book" style="font-size: 1rem"></i>Book</li>
+                    <li routerLink="/manage/content-book"><i class="pi pi-book" style="font-size: 1rem"></i>Content Book</li>
+                    <li routerLink="/manage/translation"><i class="pi pi-language" style="font-size: 1rem"></i>Translation</li>
+                </ul>
+            </li>
+
+        </ul>
     </div>
 </div>
+
 <div class="container">
     <router-outlet></router-outlet>
 </div>

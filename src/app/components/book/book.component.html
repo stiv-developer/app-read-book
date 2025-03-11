@@ -4,127 +4,156 @@
     <input class="search" type="text" placeholder="Search" [(ngModel)]="bookSearch" (keydown.enter)="searchBookTitle()">
     <button (click)="showDialog()" class="btn-add-book"><i class="pi pi-plus"
             style="font-size: 0.85rem;margin-right: 5px;"></i>Add Book</button>
-    <p-dialog header="Add Book" [modal]="true" [(visible)]="visible" [style]="{ width: '50rem' }">
-        <form [formGroup]="bookForm">
-            <div class="flex">
-                <div class="group mr-5">
-                    <div class="flex flex-column gap-3 mb-3">
-                        <label for="username" class="font-semibold w-6rem">Title</label>
-                        <input pInputText class="flex-auto h-2rem" autocomplete="off" formControlName="title" />
-                        <small class="error" *ngIf="bookForm.get('title')?.invalid && bookForm.get('title')?.touched">
-                            Title is required (min 3 chars)
-                        </small>
-                    </div>
-                    <div class="flex flex-column gap-3 mb-3">
-                        <label for="email" class="font-semibold w-6rem">Author</label>
-                        <input pInputText class="flex-auto h-2rem" autocomplete="off" formControlName="author" />
-                        <small class="error" *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched">
-                            Author is required (min 3 chars)
-                        </small>
-                    </div>
-                    <div class="flex flex-column gap-3 mb-3">
-                        <label for="email" class="font-semibold w-6rem">Star</label>
-                        <p-inputNumber class="flex-auto h-2rem" formControlName="star" [min]="0" [max]="5"
-                            [useGrouping]="false"></p-inputNumber>
-                        <small class="error" *ngIf="bookForm.get('star')?.invalid && bookForm.get('star')?.touched">
-                            Stars must be between 1 and 5
-                        </small>
-                    </div>
-                </div>
-                <div class="group">
-                    <div class="flex flex-column gap-3 mb-5">
-                        <label for="email" class="font-semibold w-6rem">File</label>
-                        <p-fileUpload #fileUploadRef mode="basic" name="file" chooseIcon="pi pi-upload" accept="image/*"
-                            maxFileSize="1000000" (onSelect)="onFileSelected($event, fileUploadRef)"
-                            (onUpload)="onBasicUploadAuto()" [auto]="true" chooseLabel="Browse"
-                            [disabled]=" imageBook !== null" />
-                        <label class="font-semibold">Current Image</label>
-                        <div class="flex flex-row flex-wrap" *ngIf="imageBook">
-                            <img [src]="imageBook.routeFile" alt="Book Image"
-                                style="width: 100px; height: 100px; border: 1px solid #ccc;" />
-                            <p style="width: 150px;">{{ imageBook.nameFile }}</p>
-                            <p>{{ (imageBook.size / 1024).toFixed(2) }} KB</p>
-                            <p-button (click)="deleteImage()" label="X"
-                                class="flex align-items-center justify-content-center m-2" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="flex justify-content-end gap-2">
-                <p-button label="Cancel" severity="secondary" (onClick)="visible = false" />
-                <p-button label="Save" (click)="createBook()" [disabled]="bookForm.invalid" />
-            </div>
-        </form>
-    </p-dialog>
 </div>
-<p-table [value]="books" [tableStyle]="{ 'min-width': '50rem' }">
+<p-table [value]="books" [tableStyle]="{ 'min-width': '50rem' }" styleClass="p-datatable-gridlines"
+    [resizableColumns]="true" [scrollable]="true" scrollHeight="700px">
     <ng-template pTemplate="header">
         <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Star</th>
-            <th>Options</th>
+            <th pResizableColumn>Title</th>
+            <th pResizableColumn>Author</th>
+            <th pResizableColumn>Image</th>
+            <th pResizableColumn>Star</th>
+            <th pResizableColumn>Status</th>
+            <th pResizableColumn>Options</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-book>
-        <tr>
-            <td>{{ book.title }}</td>
-            <td>{{ book.author }}</td>
-            <td>
+    <ng-template pTemplate="body" let-book [ngStyle]="{'margin':'0px'}">
+        <tr [ngStyle]="{'padding':'0px'}">
+            <td [ngStyle]="{'padding':'5px'}" width="50">{{ book.title }}</td>
+            <td [ngStyle]="{'padding':'5px'}" width="50">{{ book.author }}</td>
+            <td [ngStyle]="{'padding':'5px','text-align':'center'}">
+                <img [src]="book.img || 'assets/default-book.jpg'" alt="" width="50" class="shadow-4">
+            </td>
+            <td [ngStyle]="{'padding':'5px'}">
                 <ul class="rating">
                     <li *ngFor="let star of getStarsArray(book.star)">
                         <i class="pi pi-star-fill"></i>
                     </li>
                 </ul>
             </td>
-            <td><button class="btn-edit-book" (click)="showUpdateDialog(book)">Update</button></td>
-            <p-dialog header="Update Book" [modal]="true" [(visible)]="visibleUpdate" [style]="{ width: '50rem' }">
-                <form [formGroup]="updateForm">
-                    <div class="flex">
-                        <div class="group mr-5">
-                            <div class="flex flex-column gap-3 mb-3">
-                                <label for="update-title" class="font-semibold w-6rem">Title</label>
-                                <input pInputText class="flex-auto h-2rem" formControlName="title" />
-                            </div>
-                            <div class="flex flex-column gap-3 mb-3">
-                                <label for="update-author" class="font-semibold w-6rem">Author</label>
-                                <input pInputText class="flex-auto h-2rem" formControlName="author" />
-                            </div>
-                            <div class="flex flex-column gap-3 mb-3">
-                                <label for="update-star" class="font-semibold w-6rem">Star</label>
-                                <p-inputNumber id="update-star" class="flex-auto h-2rem" formControlName="star"
-                                    [min]="0" [max]="5" [useGrouping]="false"></p-inputNumber>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <div class="flex flex-column gap-3 mb-5">
-                                <label class="font-semibold">File</label>
-                                <p-fileUpload #fileUploadRefUpdate mode="basic" name="file" chooseIcon="pi pi-upload"
-                                    accept="image/*" maxFileSize="1000000"
-                                    (onSelect)="onFileSelectedUpdate($event, fileUploadRefUpdate)" chooseLabel="Browse"
-                                    [disabled]="imageBook !== null" />
-
-                                <label class="font-semibold">Current Image</label>
-                                <div class="flex flex-row flex-wrap" *ngIf="imageBook">
-                                    <img [src]="imageBook.routeFile || selectedBook!.img" alt="Book Image"
-                                        style="width: 100px; height: 100px; border: 1px solid #ccc;" />
-                                    <p style="width: 150px;">{{ imageBook.nameFile }}</p>
-                                    <p>{{ (imageBook.size / 1024).toFixed(2) }} KB</p>
-                                    <p-button (click)="deleteImage()" label="X"
-                                        class="flex align-items-center justify-content-center m-2" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-content-end gap-2">
-                        <p-button label="Cancel" severity="secondary" (click)="visibleUpdate = false" />
-                        <p-button label="Update" (click)="updateBook()" [disabled]="updateForm.invalid"/>
-                    </div>
-                </form>
-            </p-dialog>
+            <!-- <td [ngStyle]="{'padding':'5px'}">{{book.status}}</td> -->
+            <td [ngStyle]="{'padding':'5px'}">
+                <p-tag [value]="book.status" [severity]="getSeverity(book.status)" />
+            </td>
+            <td [ngStyle]="{'padding':'5px'}"><button class="btn-edit-book"
+                    (click)="showUpdateDialog(book)">Update</button></td>
         </tr>
     </ng-template>
 </p-table>
+
+<!-- Modal create book -->
+<p-dialog header="Add Book" [modal]="true" [(visible)]="visible" [style]="{ width: '50rem' }">
+    <form [formGroup]="bookForm">
+        <div class="flex">
+            <div class="group mr-5">
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="username" class="font-semibold w-6rem">Title</label>
+                    <input pInputText class="flex-auto h-2rem" autocomplete="off" formControlName="title" />
+                    <small class="error" *ngIf="bookForm.get('title')?.invalid && bookForm.get('title')?.touched">
+                        Title is required (min 3 chars)
+                    </small>
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="email" class="font-semibold w-6rem">Author</label>
+                    <input pInputText class="flex-auto h-2rem" autocomplete="off" formControlName="author" />
+                    <small class="error" *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched">
+                        Author is required (min 3 chars)
+                    </small>
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="email" class="font-semibold w-6rem">Star</label>
+                    <p-inputNumber class="flex-auto h-2rem" formControlName="star" [min]="0" [max]="5"
+                        [useGrouping]="false"></p-inputNumber>
+                    <small class="error" *ngIf="bookForm.get('star')?.invalid && bookForm.get('star')?.touched">
+                        Stars must be between 1 and 5
+                    </small>
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="email" class="font-semibold w-6rem">Category</label>
+                    <p-dropdown [options]="categories" formControlName="selectedCategory" optionLabel="name"
+                        placeholder="Select a Category" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="flex flex-column gap-3 mb-5">
+                    <label for="email" class="font-semibold w-6rem">File</label>
+                    <p-fileUpload #fileUploadRef mode="basic" name="file" chooseIcon="pi pi-upload" accept="image/*"
+                        maxFileSize="1000000" (onSelect)="onFileSelected($event, fileUploadRef)"
+                        (onUpload)="onBasicUploadAuto()" [auto]="true" chooseLabel="Browse"
+                        [disabled]=" imageBook !== null" />
+                    <label class="font-semibold">Current Image</label>
+                    <div class="flex flex-row flex-wrap" *ngIf="imageBook">
+                        <img [src]="imageBook.routeFile" alt="Book Image"
+                            style="width: 100px; height: 100px; border: 1px solid #ccc;" />
+                        <p style="width: 150px;">{{ imageBook.nameFile }}</p>
+                        <p>{{ (imageBook.size / 1024).toFixed(2) }} KB</p>
+                        <p-button (click)="deleteImage()" label="X"
+                            class="flex align-items-center justify-content-center m-2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex justify-content-end gap-2">
+            <p-button label="Cancel" severity="secondary" (onClick)="visible = false" />
+            <p-button label="Save" (click)="createBook()" [disabled]="bookForm.invalid" />
+        </div>
+    </form>
+</p-dialog>
+<!-- Modal update book -->
+<p-dialog header="Update Book" [modal]="true" [(visible)]="visibleUpdate" [style]="{ width: '50rem', height: '40rem' }">
+    <form [formGroup]="updateForm">
+        <div class="flex">
+            <div class="group mr-5">
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="update-title" class="font-semibold w-6rem">Title</label>
+                    <input pInputText class="flex-auto h-2rem" formControlName="title" />
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="update-author" class="font-semibold w-6rem">Author</label>
+                    <input pInputText class="flex-auto h-2rem" formControlName="author" />
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="update-star" class="font-semibold w-6rem">Star</label>
+                    <p-inputNumber id="update-star" class="flex-auto h-2rem" formControlName="star" [min]="0" [max]="5"
+                        [useGrouping]="false"></p-inputNumber>
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="email" class="font-semibold w-6rem">Category</label>
+                    <p-dropdown [options]="categories" formControlName="selectedCategory" optionLabel="name"
+                        placeholder="Select a Category" />
+                </div>
+                <div class="flex flex-column gap-3 mb-3">
+                    <label for="email" class="font-semibold w-6rem">Status</label>
+                    <p-dropdown [options]="states" formControlName="selectedStatus" optionLabel="name"
+                        placeholder="Select a State" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="flex flex-column gap-3 mb-5">
+                    <label class="font-semibold">File</label>
+                    <p-fileUpload #fileUploadRefUpdate mode="basic" name="file" chooseIcon="pi pi-upload"
+                        accept="image/*" maxFileSize="1000000"
+                        (onSelect)="onFileSelectedUpdate($event, fileUploadRefUpdate)" chooseLabel="Browse"
+                        [disabled]="imageBook !== null" />
+
+                    <label class="font-semibold">Current Image</label>
+                    <div class="flex flex-row flex-wrap" *ngIf="imageBook">
+                        <img [src]="imageBook.routeFile || selectedBook!.img" alt="Book Image"
+                            style="width: 100px; height: 100px; border: 1px solid #ccc;" />
+                        <p style="width: 150px;">{{ imageBook.nameFile }}</p>
+                        <p>{{ (imageBook.size / 1024).toFixed(2) }} KB</p>
+                        <p-button (click)="deleteImage()" label="X"
+                            class="flex align-items-center justify-content-center m-2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-content-end gap-2">
+            <p-button label="Cancel" severity="secondary" (click)="visibleUpdate = false" />
+            <p-button label="Update" (click)="updateBook()" [disabled]="updateForm.invalid" />
+        </div>
+    </form>
+</p-dialog>

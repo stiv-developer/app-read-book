@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div [ngClass]="{ 'hidden': isUpdating }" class="group-add-chapter">
+    <!-- <div [ngClass]="{ 'hidden': isUpdating }" class="group-add-chapter">
         <div class="card">
             <form [formGroup]="contentChapterForm">
                 <h2>Add</h2>
@@ -25,7 +25,8 @@
                 </div>
                 <div class="form-control">
                     <label for="description" class="font-semibold w-6rem">Description</label>
-                    <p-editor formControlName="description" [style]="{ height: '320px' }" (onTextChange)="updateDescription($event)" />
+                    <p-editor formControlName="description" [style]="{ height: '320px' }"
+                        (onTextChange)="updateDescription($event)" />
                 </div>
                 <div class="form-control">
                     <button (click)="createContentChapter()">Add</button>
@@ -36,22 +37,23 @@
     <div [ngClass]="{ 'hidden': !isUpdating }" class="group-update-chapter">
         <div class="card">
             <form [formGroup]="contentChapterUpdateForm">
-                 <h2>Update</h2>
-            <div class="form-control">
-                <label for="">Position</label>
-                <input type="number"  formControlName="position">
-            </div>
-            <div class="form-control">
-                <label for="">Description</label>
-                <p-editor formControlName="description" [style]="{ height: '320px' }" (onTextChange)="updateDescription($event)"></p-editor>
-            </div>
-            <div class="form-control">
-                <button (click)="updateContentChapter()">Update</button>
-                <button (click)="deleteContentChapter(selectedContentBook.id)">Delete</button>
-                <button (click)="resetForm()">Cancel</button>
-            </div>
+                <h2>Update</h2>
+                <div class="form-control">
+                    <label for="">Position</label>
+                    <input type="number" formControlName="position">
+                </div>
+                <div class="form-control">
+                    <label for="">Description</label>
+                    <p-editor formControlName="description" [style]="{ height: '320px' }"
+                        (onTextChange)="updateDescription($event)"></p-editor>
+                </div>
+                <div class="form-control">
+                    <button (click)="updateContentChapter()">Update</button>
+                    <button (click)="deleteContentChapter(selectedContentBook.id)">Delete</button>
+                    <button (click)="resetForm()">Cancel</button>
+                </div>
             </form>
-           
+
         </div>
-    </div>
+    </div> -->
 </div>

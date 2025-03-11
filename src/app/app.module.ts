@@ -27,6 +27,7 @@ import { MessageService } from 'primeng/api';
 import { EditorModule } from 'primeng/editor';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
+import { TagModule } from 'primeng/tag';
 
 // REACTIVE FORM
 import { ReactiveFormsModule } from '@angular/forms';
@@ -62,7 +63,8 @@ import { TranslationComponent } from './pages/translation/translation.component'
     FileUploadModule,
     EditorModule,
     IconFieldModule,
-    InputIconModule
+    InputIconModule,
+    TagModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

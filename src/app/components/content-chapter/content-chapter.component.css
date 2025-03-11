@@ -1,14 +1,22 @@
 .group {
     display: grid;
-    grid-template-columns: 9fr 3fr;
+    /* grid-template-columns: 9fr 3fr; */
+    grid-template-columns: 12fr;
+    /* border: 1px solid red; */
+    gap: 5px;
 }
 
-.group-list-chapter {}
+.group-list-chapter {
+    /* border: 1px solid black; */
+    width: 80%;
+}
 
 .group-list-chapter .group-card {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    /* border: 1px solid green; */
+    width:100%;
 }
 
 .group-list-chapter .group-card .card {
@@ -19,6 +27,24 @@
     position: relative;
 }
 
+:host ::ng-deep .group-list-chapter .group-card .card .rich-content{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    overflow: hidden; /* Evita desbordamiento */
+}
+
+/* :host ::ng-deep .group-list-chapter .group-card .card .rich-content p{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+} */
+
+:host ::ng-deep .group-list-chapter .group-card .card .rich-content p img {
+    border: 1px solid navy !important;
+    width: 250px;
+}
+
 .group-list-chapter .group-card .card p {
     margin: 0;
 }
@@ -27,6 +53,7 @@
     position: absolute;
     right: -10px;
     top: -10px;
+    /* z-index: 5; */
 }
 
 .group-list-chapter .group-card .card .container-btn button {
@@ -43,6 +70,7 @@
 /* CREATE FORM */
 .group-add-chapter {
     display: block;
+    width: 100%;
 }
 
 .group-add-chapter .card {
@@ -163,39 +191,22 @@
     display: none;
 }
 
-::ng-deep .p-dropdown {
-    height: 35px;
-    width: 98%;
-}
-
-::ng-deep .p-dropdown-panel .p-dropdown-items {
-    max-height: 250px;
-}
-
-::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
-    padding-top: 5px;
-}
-
-::ng-deep .p-dropdown .p-dropdown-label {
-    padding-top: 5px;
-}
-
 .rich-content {
-    width: 1000px;
+    /* width: 1000px;
     max-width: 100%;
     overflow: hidden;
-    word-wrap: break-word;
+    word-wrap: break-word; */
 }
 
 .rich-content img,
 .rich-content table,
 .rich-content div {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
 }
 
 .rich-content table {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .rich-content pre {
@@ -203,3 +214,6 @@
     /* background-color: black !important; */
 }
 
+@media only screen and (min-width:600px) and (max-width:768px) {
+   
+  }

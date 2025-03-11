@@ -52,6 +52,23 @@
     font-family: "Roboto", serif;
 }	
 
+::ng-deep .p-dropdown {
+    height: 35px;
+    width: 98%;
+}
+
+::ng-deep .p-dropdown-panel .p-dropdown-items {
+    max-height: 250px;
+}
+
+::ng-deep .p-dropdown .p-dropdown-label.p-placeholder {
+    padding-top: 5px;
+}
+
+::ng-deep .p-dropdown .p-dropdown-label {
+    padding-top: 5px;
+}
+
 @media only screen and (min-width: 1200px) {
 
 }

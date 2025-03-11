@@ -63,6 +63,11 @@ export class ContentChapterComponent implements OnInit {
       this.contentBookservice.getContentBookById(bookId).subscribe(
         (data: ContentBook) => {
           this.contentBook = data;
+          this.contentBook.chapters.forEach(chapter => {
+            if (chapter.description) {
+              chapter.description = chapter.description.replace(/&nbsp;/g, ' ');
+            }
+          });
           this.contentBook.chapters.sort((a, b) => a.position - b.position);
         },
         error => console.error('Error loading books:', error)

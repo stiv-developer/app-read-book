@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-menu-manage',
@@ -10,5 +10,15 @@ export class MenuManageComponent {
 
   toggleMenu(): void {
     this.menuVisible = !this.menuVisible;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: Event){
+    const menu = document.querySelector('.menu-right');
+    const burger = document.querySelector('.burger-menu');
+
+    if( menu && !menu.contains(event.target as Node) && burger && !burger.contains(event.target as Node)){
+      this.menuVisible = false;
+    }
   }
 }

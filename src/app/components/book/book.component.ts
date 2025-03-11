@@ -5,6 +5,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { ImageBookService } from '../../services/image-book.service';
 import { Observable } from 'rxjs';
+import { Category } from '../../interfaces/category';
+import { CategoryService } from '../../services/category.service';
+import { transition } from '@angular/animations';
+
+interface Status {
+  name: string;
+  code: string;
+}
 
 @Component({
   selector: 'app-book',
@@ -19,6 +27,11 @@ export class BookComponent implements OnInit {
   books: Book[] = [];
   bookSearch: string = '';
   totalBooks: number = 0;
+
+  categories: Category[] = [];
+  selectedCategory:  Category | undefined;
+  states: Status[] = [];
+  selectedStatus: Status | undefined;
 
   visible: boolean = false;
   visibleUpdate: boolean = false;
@@ -35,13 +48,21 @@ export class BookComponent implements OnInit {
   constructor(private bookService: BookService,
     private fb: FormBuilder,
     private imageBookService: ImageBookService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private categoryService: CategoryService
   ) { }
 
   ngOnInit(): void {
 
+    this.states = [
+      { name: 'completed',code:'01'},
+      { name: 'process',code:'01'},
+      { name: 'earring',code:'01'},
+    ]
+
     this.initForms();
     this.loadBooks();
+    this.loadCategories();
 
   }
 
@@ -50,22 +71,42 @@ export class BookComponent implements OnInit {
       (data) => {
         this.books = data;
         this.totalBooks = data.length;
+
+        //Cargar la imagen de cada libro
+        this.books.forEach(book => {
+          if (book.img) {
+            book.imageId = book.img;
+            this.loadImageForBook(book)
+          }
+        });
       },
       error => console.error('Error loading books:', error)
     );
+  }
+
+  loadCategories(): void{
+    this.categoryService.getAllCategories().subscribe({
+      next: (data) => {
+        this.categories = data;
+      },
+      error: error => console.error('Error load categories',error)
+    })
   }
 
   initForms(): void {
     this.bookForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(3)]],
       author: ['', [Validators.required, Validators.minLength(3)]],
-      star: [0, [Validators.required, Validators.min(1), Validators.max(5)]]
+      star: [0, [Validators.required, Validators.min(1), Validators.max(5)]],
+      selectedCategory:[null, Validators.required]
     });
 
     this.updateForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(3)]],
       author: ['', [Validators.required, Validators.minLength(3)]],
       star: [0, [Validators.required, Validators.min(1), Validators.max(5)]],
+      selectedCategory:[null, Validators.required],
+      selectedStatus:[null, Validators.required]
     });
   }
 
@@ -78,23 +119,29 @@ export class BookComponent implements OnInit {
 
   showUpdateDialog(book: Book): void {
 
-    this.selectedBook = { ...book }; // Clona el libro seleccionado
+    this.selectedBook = { ...book };
+
+    // Buscar la categoría y el estado en las listas
+    const selectedCategory = this.categories.find(category => category.id === book.category);
+    const selectedStatus = this.states.find(state => state.name === book.status);
+
     this.updateForm.patchValue({
       title: book.title,
       author: book.author,
       star: book.star,
-    }); // Actualiza los valores del formulario
-
-    if (book.img) {
-      console.log("Cargando imagen del libro:", book.img);
-      this.loadImageBook(book.img); // Cargar datos completos de la imagen
+      selectedCategory:selectedCategory || null,
+      selectedStatus: selectedStatus || null
+    }); 
+    // console.log()
+    if (book.imageId) {
+      this.loadImageBook(book.imageId); 
     }
-    
-    this.visibleUpdate = true; // Muestra el diálogo
+
+    this.visibleUpdate = true; 
   }
 
   onFileSelected(event: any, fileUploadRef: any) {
-    const file = event.files[0]; // Obtener el archivo seleccionado
+    const file = event.files[0]; 
 
     if (!file) return;
 
@@ -123,11 +170,18 @@ export class BookComponent implements OnInit {
 
     this.uploadImage().subscribe({
       next: (image) => {
+
+        const { selectedCategory, ...formValues } = this.bookForm.value;
+
         const newBook: Book = {
-          ...this.bookForm.value,
+          // ...this.bookForm.value,
+          ...formValues,
           img: image.id,
+          category: selectedCategory?.id,
+          status: "earring",
           contents: []
         };
+        console.log(newBook)
 
         this.bookService.createBook(newBook).subscribe({
           next: (book) => {
@@ -152,10 +206,19 @@ export class BookComponent implements OnInit {
 
     if (this.updateForm.invalid || !this.selectedBook) return;
 
+    const { selectedCategory, selectedStatus, imageId, ...formValues } = this.updateForm.value;
+
     const updatedBook: Book = {
       ...this.selectedBook,
-      ...this.updateForm.value, // Usa los valores del formulario
+      ...formValues,
+      category: selectedCategory?.id, // Solo el ID de la categoría
+      status: selectedStatus?.name,   // Solo el nombre del estado
+      img: this.selectedBook.imageId// Asignamos imageId a img
     };
+
+    // delete (updatedBook as any).imageId;
+
+    console.log("updatedBook: ",updatedBook);
 
     if (this.selectedFile) {
       this.uploadImage().subscribe({
@@ -226,18 +289,32 @@ export class BookComponent implements OnInit {
   }
 
   deleteImage() {
-    this.selectedFile = null; 
+    this.selectedFile = null;
     this.imageBook = null;
   }
 
   loadImageBook(imageId: string) {
+    // console.log('loadImageBook')
     this.imageBookService.getByIdImageBook(imageId).subscribe({
       next: (data) => {
         this.imageBook = data;
-        console.log("Imagen cargada: ", this.imageBook)
+        // console.log("Imagen cargada: ", this.imageBook)
       },
       error: (error) => {
         console.error("Error imagen", error);
+      }
+    })
+  }
+
+  loadImageForBook(book: Book) {
+    if (!book.imageId) return;
+    this.imageBookService.getByIdImageBook(book.imageId).subscribe({
+      next: (imageData) => {
+        book.img = imageData.routeFile;
+      },
+      error: (error) => {
+        console.error(`Error loading image for book ${book.id}:`, error);
+        book.img = 'assets/default-book.jpg'; // Imagen por defecto en caso de error
       }
     })
   }
@@ -266,10 +343,21 @@ export class BookComponent implements OnInit {
     });
   }
 
-  resetForm():void {
+  resetForm(): void {
     this.bookForm.reset();
     this.selectedFile = null;
     this.imageBook = null;
     this.fileUpload.clear();
+  }
+
+  getSeverity(status: string): "success" | "secondary" | "info" | undefined {
+    switch (status) {
+      case 'completed':
+        return 'success';
+      case 'process':
+        return 'secondary';
+      default:
+        return undefined; // Handles unexpected values
+    }
   }
 }
